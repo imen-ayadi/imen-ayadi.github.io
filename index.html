@@ -384,21 +384,7 @@
         <div style="display:flex;flex-wrap:wrap;gap:5px;"><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">PostgreSQL</span><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">Python</span><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">ELT Pipelines</span><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">Star Schema</span><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">Azure</span><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">Power BI</span></div>
         <a href="https://www.impact-initiatives.org" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:5px;font-size:11px;padding:5px 12px;border:1px solid rgba(26,24,20,0.15);color:var(--teal);text-decoration:none;margin-top:10px;transition:background 0.2s;" onmouseover="this.style.background='var(--teal-light)'" onmouseout="this.style.background='transparent'">&#8599; IMPACT Initiatives</a>
       </div>
-      <div style="position:relative;overflow:hidden;background:#0a1628;height:520px;display:flex;align-items:center;justify-content:center;padding:2.5rem;">
-        <div style="font-family:'DM Mono',monospace;font-size:11px;line-height:2;width:100%;color:#e6edf3;">
-          <div style="color:#39d2a4;margin-bottom:0.75rem;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;">PostgreSQL · Star Schema</div>
-          <div style="color:#8b949e;">── fact_displacement</div>
-          <div style="padding-left:1.25rem;">├── location_id <span style="color:#39d2a4;">→</span> dim_admin</div>
-          <div style="padding-left:1.25rem;">├── cluster_id &nbsp;<span style="color:#39d2a4;">→</span> dim_cluster</div>
-          <div style="padding-left:1.25rem;">└── date_id &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#39d2a4;">→</span> dim_date</div>
-          <div style="color:#8b949e;margin-top:0.5rem;">── fact_casualties</div>
-          <div style="padding-left:1.25rem;">├── source_id &nbsp;&nbsp;<span style="color:#39d2a4;">→</span> dim_source</div>
-          <div style="padding-left:1.25rem;">└── period_id &nbsp;&nbsp;<span style="color:#39d2a4;">→</span> dim_date</div>
-          <div style="margin-top:1.25rem;color:#39d2a4;font-size:10px;">10+ sources ingested &nbsp;·&nbsp; 26+ months</div>
-          <div style="color:#39d2a4;font-size:10px;">55 admin clusters &nbsp;·&nbsp; 100% geo coverage</div>
-          <div style="margin-top:0.75rem;color:#484f58;font-size:10px;">Internal project — code not public</div>
-        </div>
-      </div>
+      <div style="position:relative;overflow:hidden;background:var(--bg2);height:520px;"><img loading="lazy" class="pimg" src="assets/images/proj-impact-img1.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:var(--bg2);opacity:1;transition:opacity 0.5s;"></div>
     </div>
 <div style="width:100vw;max-width:100%;flex-shrink:0;display:grid;grid-template-columns:1fr 1fr;height:520px;overflow:hidden;">
       <div style="padding:3rem 3.5rem;display:flex;flex-direction:column;justify-content:center;background:var(--bg);overflow:hidden;">
@@ -477,9 +463,7 @@
   <div id="projects-grid" style="display:none;max-width:1100px;margin:0 auto;padding:0 4rem 5rem;">
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);">
       <div style="background:var(--bg2);display:flex;flex-direction:column;transition:background 0.2s;" onmouseover="this.style.background='var(--bg)'" onmouseout="this.style.background='var(--bg2)'">
-        <div style="height:180px;overflow:hidden;background:#0a1628;display:flex;align-items:center;justify-content:center;padding:1.25rem;font-family:'DM Mono',monospace;font-size:10px;color:#e6edf3;line-height:1.8;">
-          <div><div style="color:#39d2a4;margin-bottom:0.5rem;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;">Star Schema</div><div style="color:#8b949e;">fact_displacement</div><div style="padding-left:1rem;">├── dim_admin</div><div style="padding-left:1rem;">└── dim_date</div><div style="color:#8b949e;margin-top:0.25rem;">fact_casualties</div><div style="padding-left:1rem;">└── dim_source</div></div>
-        </div>
+        <div style="height:180px;overflow:hidden;"><img src="assets/images/proj-impact-img1.png" alt="Sudan Humanitarian Data Infrastructure" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
         <div style="padding:1.5rem 1.75rem;flex:1;display:flex;flex-direction:column;">
           <div style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:0.5rem;">Humanitarian · Data Engineering</div>
           <div style="font-family:Fraunces,serif;font-size:17px;font-weight:300;margin-bottom:0.5rem;">Sudan Humanitarian Data Infrastructure</div>
