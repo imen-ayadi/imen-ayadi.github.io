@@ -124,9 +124,7 @@ reveals.forEach(el=>obs.observe(el));
     counters.forEach(c => obs.observe(c));
   }
 
-  // Delay start until after preloader curtain finishes (2.2s dismiss + 0.9s slide)
-  var delay = document.getElementById('preloader') ? 3200 : 0;
-  setTimeout(initObs, delay);
+  setTimeout(initObs, 0);
 })();
 
 (function(){
@@ -199,20 +197,75 @@ function closeCertModal(){
 }
 document.addEventListener('keydown', e => { if(e.key === 'Escape') closeCertModal(); });
 
-// ── PRELOADER ────────────────────────────────────────
+// ── HERO PARTICLE CANVAS ─────────────────────────────
 (function () {
-  var pre = document.getElementById('preloader');
-  if (!pre) return;
+  var canvas = document.getElementById('hero-canvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var particles = [];
+  var COUNT = 75;
+  var MAX_DIST = 150;
+  var raf;
 
-  // lock scroll while preloader is visible
-  document.body.style.overflow = 'hidden';
-
-  function dismiss() {
-    pre.classList.add('pl-done');
-    document.body.style.overflow = '';
-    setTimeout(function () { pre.style.display = 'none'; }, 950);
+  function resize() {
+    canvas.width  = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
   }
 
-  // bar fills over 1.15s starting at 0.85s → done at ~2s; dismiss at 2.2s
-  setTimeout(dismiss, 2200);
+  function Particle() {
+    this.x  = Math.random() * canvas.width;
+    this.y  = Math.random() * canvas.height;
+    this.vx = (Math.random() - 0.5) * 0.45;
+    this.vy = (Math.random() - 0.5) * 0.45;
+    this.r  = Math.random() * 1.4 + 0.5;
+  }
+  Particle.prototype.update = function () {
+    this.x += this.vx;
+    this.y += this.vy;
+    if (this.x < 0 || this.x > canvas.width)  this.vx *= -1;
+    if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+  };
+
+  function init() {
+    resize();
+    particles = [];
+    for (var i = 0; i < COUNT; i++) particles.push(new Particle());
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+    var rgb  = dark ? '57,210,164' : '26,122,100';
+    var dotA = dark ? 0.55 : 0.35;
+    var lineA = dark ? 0.18 : 0.10;
+
+    for (var i = 0; i < particles.length; i++) {
+      particles[i].update();
+      ctx.beginPath();
+      ctx.arc(particles[i].x, particles[i].y, particles[i].r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(' + rgb + ',' + dotA + ')';
+      ctx.fill();
+    }
+
+    for (var i = 0; i < particles.length; i++) {
+      for (var j = i + 1; j < particles.length; j++) {
+        var dx = particles[i].x - particles[j].x;
+        var dy = particles[i].y - particles[j].y;
+        var d  = Math.sqrt(dx * dx + dy * dy);
+        if (d < MAX_DIST) {
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.strokeStyle = 'rgba(' + rgb + ',' + ((1 - d / MAX_DIST) * lineA) + ')';
+          ctx.lineWidth = 0.6;
+          ctx.stroke();
+        }
+      }
+    }
+    raf = requestAnimationFrame(draw);
+  }
+
+  window.addEventListener('resize', function () { init(); });
+  init();
+  draw();
 })();
