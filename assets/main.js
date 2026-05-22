@@ -193,3 +193,21 @@ function closeCertModal(){
   document.body.style.overflow = '';
 }
 document.addEventListener('keydown', e => { if(e.key === 'Escape') closeCertModal(); });
+
+// ── PRELOADER ────────────────────────────────────────
+(function () {
+  var pre = document.getElementById('preloader');
+  if (!pre) return;
+
+  // lock scroll while preloader is visible
+  document.body.style.overflow = 'hidden';
+
+  function dismiss() {
+    pre.classList.add('pl-done');
+    document.body.style.overflow = '';
+    setTimeout(function () { pre.style.display = 'none'; }, 950);
+  }
+
+  // bar fills over 1.15s starting at 0.85s → done at ~2s; dismiss at 2.2s
+  setTimeout(dismiss, 2200);
+})();
