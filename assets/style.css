@@ -889,8 +889,11 @@ a.cert-card-link:hover .cert-arrow,
 
 /* footer */
 footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,0.06); padding: 1.5rem 4rem; display: flex; justify-content: space-between; align-items: center; max-width: 100%; }
-.footer-inner { max-width: 1100px; margin: 0 auto; width: 100%; display: flex; justify-content: space-between; align-items: center; }
+.footer-inner { max-width: 1100px; margin: 0 auto; width: 100%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; }
 .footer-text { font-size: 11px; color: rgba(247,245,240,0.3); }
+.footer-links { display: flex; gap: 1.5rem; align-items: center; }
+.footer-links a { font-size: 11px; color: rgba(247,245,240,0.4); text-decoration: none; letter-spacing: 0.06em; transition: color 0.2s; }
+.footer-links a:hover { color: var(--teal); }
 
 /* scroll to top — glowing gauge */
 .scroll-top {
