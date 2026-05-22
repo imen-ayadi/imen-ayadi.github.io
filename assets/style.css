@@ -200,31 +200,6 @@ section { padding: 7rem 4rem; max-width: 1100px; margin: 0 auto; }
 .btn-cv:hover .cv-arrow { transform: translateY(3px); }
 .cv-arrow { transition: transform 0.2s ease; }
 
-/* CV download — persistent floating pill */
-.cv-float {
-  position: fixed;
-  bottom: 7.75rem;
-  right: 2rem;
-  z-index: 500;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 9px 16px;
-  background: var(--teal);
-  color: var(--bg);
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-  box-shadow: 0 4px 18px rgba(26,122,100,0.35);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.cv-float:hover { transform: translateY(-2px); box-shadow: 0 8px 26px rgba(26,122,100,0.5); }
-.cv-float:hover svg { transform: translateY(2px); }
-.cv-float svg { transition: transform 0.2s ease; }
-[data-theme="dark"] .cv-float { box-shadow: 0 4px 18px rgba(57,210,164,0.3); }
-[data-theme="dark"] .cv-float:hover { box-shadow: 0 8px 26px rgba(57,210,164,0.45); }
 
 .hero-right {
   display: flex;
