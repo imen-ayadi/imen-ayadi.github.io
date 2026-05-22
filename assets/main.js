@@ -128,37 +128,48 @@ reveals.forEach(el=>obs.observe(el));
 })();
 
 (function(){
-  // Toggle timeline / list
-  const btns = document.querySelectorAll('.exp-toggle-btn');
-  const tl = document.getElementById('exp-timeline');
-  const list = document.getElementById('exp-list');
-  btns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      btns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      if(btn.dataset.view === 'timeline'){
-        tl.style.display = ''; list.style.display = 'none';
-      } else {
-        tl.style.display = 'none'; list.style.display = '';
-      }
-    });
-  });
-
-  // Animate teal spine fill on scroll
+  // Spine fill on scroll
   const fill = document.getElementById('tl-fill');
   const spine = document.querySelector('.tl-spine');
   function updateFill(){
     if(!fill || !spine) return;
     const rect = spine.getBoundingClientRect();
     const winH = window.innerHeight;
-    const start = rect.top;
-    const end = rect.bottom;
-    const visible = Math.min(winH, end) - Math.max(0, start);
-    const pct = Math.max(0, Math.min(1, (winH - start) / (rect.height + winH * 0.3)));
+    const pct = Math.max(0, Math.min(1, (winH - rect.top) / (rect.height + winH * 0.3)));
     fill.style.height = (pct * 100) + '%';
   }
   window.addEventListener('scroll', updateFill, { passive: true });
   updateFill();
+
+  // Dot pop animation on scroll-in
+  const dotObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('dot-pop'); dotObs.unobserve(e.target); } });
+  }, { threshold: 0.8 });
+  document.querySelectorAll('.tl-dot').forEach(d => dotObs.observe(d));
+
+  // Duration bar animation on scroll-in
+  const barObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('animated'); barObs.unobserve(e.target); } });
+  }, { threshold: 0.8 });
+  document.querySelectorAll('.tl-duration-fill').forEach(el => barObs.observe(el));
+
+  // Expandable bullets — show 3 by default
+  document.querySelectorAll('.tl-bullets').forEach(ul => {
+    const items = ul.querySelectorAll('li');
+    if(items.length <= 3) return;
+    items.forEach((li, i) => { if(i >= 3) li.style.display = 'none'; });
+    const btn = document.createElement('button');
+    btn.className = 'exp-expand-btn';
+    const extra = items.length - 3;
+    let open = false;
+    btn.textContent = '+ ' + extra + ' more';
+    btn.addEventListener('click', () => {
+      open = !open;
+      items.forEach((li, i) => { if(i >= 3) li.style.display = open ? '' : 'none'; });
+      btn.textContent = open ? '— show less' : '+ ' + extra + ' more';
+    });
+    ul.after(btn);
+  });
 })();
 
 (function(){
