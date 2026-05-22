@@ -914,6 +914,19 @@ nav.nav-open .hamburger span:nth-child(3) { transform: translateY(-6.5px) rotate
   .hero-grid, .about-grid, .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
   .skills-grid, .projects-grid { grid-template-columns: 1fr; }
   .cert-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Fix high-specificity #home padding */
+  #home { padding-left: 1.5rem !important; padding-right: 1.5rem !important; padding-top: 5rem !important; }
+
+  /* Fix inline padding on skills, contact, projects header */
+  #skills { padding: 4rem 1.5rem !important; }
+  #contact { padding: 4rem 1.5rem !important; }
+  #projects > div:first-child { padding: 2.5rem 1.5rem 1.5rem !important; }
+
+  /* Fix inline slider nav/dots bar padding */
+  .ps-nav-bar { padding: 1rem 1.5rem !important; }
+  .ps-dots-bar { padding: 0.5rem 1.5rem 1rem !important; }
+
   /* ── Slider: override inline styles ── */
   #ps-track > div {
     grid-template-columns: 1fr !important;
@@ -929,6 +942,15 @@ nav.nav-open .hamburger span:nth-child(3) { transform: translateY(-6.5px) rotate
     padding: 1.5rem !important;
     overflow: visible !important;
   }
+
+  /* ── Timeline: single-column on mobile ── */
+  .tl-spine { left: 12px !important; transform: none !important; }
+  .tl-spine-fill { left: 12px !important; transform: none !important; }
+  .tl-entry { padding-left: 32px; gap: 0.5rem; }
+  .tl-right, .tl-left { flex-direction: column !important; }
+  .tl-dot { left: 12px !important; top: 8px !important; transform: translate(-50%, 0) !important; }
+  .tl-year { width: 100% !important; text-align: left !important; }
+  .tl-card { width: 100% !important; }
 }
 
 /* PROJECT SLIDER */
