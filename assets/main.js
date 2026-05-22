@@ -112,16 +112,21 @@ reveals.forEach(el=>obs.observe(el));
     update();
   };
 
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        animateCounter(e.target);
-        obs.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.5 });
+  function initObs() {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          animateCounter(e.target);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(c => obs.observe(c));
+  }
 
-  counters.forEach(c => obs.observe(c));
+  // Delay start until after preloader curtain finishes (2.2s dismiss + 0.9s slide)
+  var delay = document.getElementById('preloader') ? 3200 : 0;
+  setTimeout(initObs, delay);
 })();
 
 (function(){
