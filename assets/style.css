@@ -999,6 +999,11 @@ nav.nav-open .hamburger span:nth-child(3) { transform: translateY(-6.5px) rotate
   /* Fix high-specificity #home padding */
   #home { padding-left: 1.5rem !important; padding-right: 1.5rem !important; padding-top: 5rem !important; }
 
+  /* Skills grid: override inline 3-col */
+  #skills > div > div { grid-template-columns: 1fr !important; }
+  .sk-group { padding: 1.25rem 1rem; }
+  .sk-tag { font-size: 11px; padding: 4px 8px; }
+
   /* Fix inline padding on skills, contact, projects header */
   #skills { padding: 4rem 1.5rem !important; }
   #contact { padding: 4rem 1.5rem !important; }
