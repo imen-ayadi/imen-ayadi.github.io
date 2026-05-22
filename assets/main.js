@@ -379,30 +379,3 @@ document.addEventListener('keydown', e => { if(e.key === 'Escape') closeCertModa
     });
   });
 })();
-
-// ── TEXT SCRAMBLE ON SECTION TITLES ──────────────
-(function(){
-  var CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  function scramble(el){
-    if(el.children.length) return;
-    var orig = el.textContent;
-    var frame = 0, total = Math.ceil(orig.length * 2.5);
-    var id = setInterval(function(){
-      el.textContent = orig.split('').map(function(ch, i){
-        if(ch === ' ') return ' ';
-        if(i < frame / 2.5) return ch;
-        return CHARS[Math.floor(Math.random() * CHARS.length)];
-      }).join('');
-      frame++;
-      if(frame >= total){ el.textContent = orig; clearInterval(id); }
-    }, 22);
-  }
-  var obs = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(!e.isIntersecting) return;
-      setTimeout(function(){ scramble(e.target); }, 280);
-      obs.unobserve(e.target);
-    });
-  }, { threshold: 0.9 });
-  document.querySelectorAll('.section-title').forEach(function(t){ obs.observe(t); });
-})();
