@@ -1106,6 +1106,11 @@ nav.nav-open .hamburger span:nth-child(3) { transform: translateY(-6.5px) rotate
   background: #010409 !important;
   color: #f7f5f0 !important;
 }
+[data-theme="dark"] .contact-link,
+[data-theme="dark"] .contact-detail-val {
+  color: rgba(247,245,240,0.85) !important;
+}
+[data-theme="dark"] .contact-link:hover { color: var(--teal) !important; }
 [data-theme="dark"] footer {
   background: #010409;
 }
