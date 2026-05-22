@@ -171,6 +171,17 @@ reveals.forEach(el=>obs.observe(el));
   bars.forEach(b => obs.observe(b));
 })();
 
+// Hamburger menu
+(function(){
+  const btn = document.getElementById('hamburger');
+  const nav = document.querySelector('nav');
+  if(!btn) return;
+  btn.addEventListener('click', () => nav.classList.toggle('nav-open'));
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => nav.classList.remove('nav-open'));
+  });
+})();
+
 // Copy email button
 (function(){
   const btn = document.getElementById('copyEmailBtn');
