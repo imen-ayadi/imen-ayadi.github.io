@@ -197,6 +197,41 @@ function closeCertModal(){
 }
 document.addEventListener('keydown', e => { if(e.key === 'Escape') closeCertModal(); });
 
+// ── TYPEWRITER ROLE CYCLER ────────────────────────────
+(function () {
+  var el = document.getElementById('typewriter');
+  if (!el) return;
+
+  var roles = ['Data Engineer', 'BI Developer', 'ETL Specialist', 'Pipeline Builder'];
+  var roleIdx = 0, charIdx = 0, deleting = false;
+  var TYPE_MS = 85, DELETE_MS = 45, PAUSE_TYPED = 2000, PAUSE_DELETED = 350;
+
+  function tick() {
+    var role = roles[roleIdx];
+    if (!deleting) {
+      charIdx++;
+      el.textContent = role.slice(0, charIdx);
+      if (charIdx === role.length) {
+        deleting = true;
+        setTimeout(tick, PAUSE_TYPED);
+        return;
+      }
+    } else {
+      charIdx--;
+      el.textContent = role.slice(0, charIdx);
+      if (charIdx === 0) {
+        deleting = false;
+        roleIdx = (roleIdx + 1) % roles.length;
+        setTimeout(tick, PAUSE_DELETED);
+        return;
+      }
+    }
+    setTimeout(tick, deleting ? DELETE_MS : TYPE_MS);
+  }
+
+  setTimeout(tick, 700); // wait for hero fade-in
+})();
+
 // ── HERO PARTICLE CANVAS ─────────────────────────────
 (function () {
   var canvas = document.getElementById('hero-canvas');
