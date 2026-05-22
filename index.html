@@ -1,0 +1,976 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Imen Ayadi — Data Engineer</title>
+
+<!-- SEO -->
+<meta name="description" content="Imen Ayadi — Data Engineer specializing in data pipelines, ETL, and humanitarian tech. Open to full-time and freelance opportunities.">
+<meta name="keywords" content="Data Engineer, ETL, Apache Spark, Airflow, dbt, Python, SQL, Tunisia, Imen Ayadi">
+<meta name="author" content="Imen Ayadi">
+<link rel="sitemap" href="/sitemap.xml" type="application/xml">
+<link rel="canonical" href="https://imen-ayadi.github.io">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+<!-- Open Graph (LinkedIn, Facebook, WhatsApp) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://imen-ayadi.github.io">
+<meta property="og:title" content="Imen Ayadi — Data Engineer">
+<meta property="og:description" content="Data Engineer specializing in pipelines, ETL & humanitarian tech. Open to full-time and freelance opportunities.">
+<meta property="og:image" content="https://imen-ayadi.github.io/og-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Imen Ayadi Portfolio">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Imen Ayadi — Data Engineer">
+<meta name="twitter:description" content="Data Engineer specializing in pipelines, ETL & humanitarian tech. Open to full-time and freelance opportunities.">
+<meta name="twitter:image" content="https://imen-ayadi.github.io/og-preview.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Imen Ayadi",
+  "jobTitle": "Data Engineer",
+  "url": "https://imen-ayadi.github.io",
+  "sameAs": [
+    "https://www.linkedin.com/in/imen-ayadi-29255617a/",
+    "https://github.com/imen-ayadi"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tunis",
+    "addressCountry": "TN"
+  },
+  "knowsAbout": ["Data Engineering", "ETL", "PostgreSQL", "Python", "Apache Spark", "dbt", "Power BI", "Azure", "Airflow"]
+}
+</script>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav>
+  <a href="#home" class="nav-logo">Imen <span>Ayadi</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+        <li><a href="#certifications">Certs</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+<button class="theme-btn" id="theme-btn" aria-label="Toggle dark mode" title="Toggle dark/light mode">☀</button>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+  <div class="hero-grid">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Data Engineer</div>
+      <h1 class="hero-name">Building<br>data systems<br>that <em>matter</em></h1>
+      <p class="hero-desc">I design and build data infrastructure for humanitarian and business intelligence — from PostgreSQL pipelines to Power BI dashboards.</p>
+      <div class="hero-btns">
+        <a href="#experience" class="btn-primary">View my work</a>
+        <a href="#contact" class="btn-outline">Get in touch</a>
+        <a href="assets/resume.pdf" download="Imen_Ayadi_CV.pdf" class="btn-outline" style="display:inline-flex;align-items:center;gap:8px;">&#8595; Download CV</a>
+      </div>
+      <div style="display:flex;gap:12px;margin-top:1.25rem;align-items:center;">
+        <a href="https://www.linkedin.com/in/imen-ayadi-29255617a/" target="_blank" rel="noopener" aria-label="LinkedIn" style="display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink2);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='var(--ink2)'">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <span style="color:var(--border);font-size:10px;">|</span>
+        <a href="https://github.com/imen-ayadi" target="_blank" rel="noopener" aria-label="GitHub" style="display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink2);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='var(--ink2)'">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-stats">
+        <div class="stat-box">
+          <div class="stat-num"><span class="counter" data-target="4" data-suffix="+">0</span></div>
+          <div class="stat-label">Years of experience</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num"><span class="counter" data-target="15" data-suffix="+">0</span></div>
+          <div class="stat-label">Tools &amp; technologies</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num"><span class="counter" data-target="20" data-suffix="+">0</span></div>
+          <div class="stat-label">Dashboards &amp; projects</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num"><span class="counter" data-target="2">0</span></div>
+          <div class="stat-label">Awards won</div>
+        </div>
+      </div>
+      <p class="hero-tagline">"From raw field data to decisions on the ground."</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-left reveal">
+      <div class="about-initial">IA</div>
+      <div class="section-header">
+        <div class="section-eyebrow">About me</div>
+        <h2 class="section-title">The person behind the pipelines</h2>
+      </div>
+    </div>
+    <div class="about-text reveal">
+      <p>I'm a Data Engineer based in Tunis. I started out in business and statistics, spent a few years teaching math, and somewhere along the way realized what I actually loved was building data systems — pipelines, ETL workflows, dashboards that people rely on to make decisions.</p>
+      <p>That led me to a Master's in Data Analytics and into some genuinely interesting work. At <strong>IMPACT Initiatives</strong> I build data infrastructure that supports humanitarian operations in Sudan. Before that I developed NLP pipelines at <strong>VERMEG</strong> in fintech, automating email classification at 92% accuracy.</p>
+      <p>I care about data that does something real — not just dashboards that look nice, but systems that hold up under pressure and actually get used.</p>
+      <div class="about-details">
+        <div class="about-detail"><span class="about-detail-label">Location</span><span class="about-detail-val">Tunis, Tunisia</span></div>
+        <div class="about-detail"><span class="about-detail-label">Currently</span><span class="about-detail-val">IMPACT Initiatives — Sudan Mission</span></div>
+        <div class="about-detail"><span class="about-detail-label">Open to</span><span class="about-detail-val">Data Engineer roles · On-site, Hybrid, Remote</span></div>
+        <div class="about-detail"><span class="about-detail-label">Email</span><span class="about-detail-val">imenayadi86@gmail.com</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" style="background:var(--bg2);padding:7rem 4rem;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">What I work with</div>
+      <h2 class="section-title">Skills &amp; stack</h2>
+    </div>
+    
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:0.5px solid var(--border);" class="reveal">
+
+      <div class="sk-group">
+        <div class="sk-label">Data Engineering</div>
+        <div class="sk-tags">
+          <span class="sk-tag"><i class="devicon-postgresql-plain colored"></i>PostgreSQL</span>
+          <span class="sk-tag"><i class="devicon-python-plain colored"></i>Python</span>
+          <span class="sk-tag"><i class="devicon-mysql-plain colored"></i>SQL</span>
+          <span class="sk-tag"><i class="devicon-azure-plain colored"></i>Azure</span>
+          <span class="sk-tag"><i class="devicon-apachespark-plain colored"></i>ETL / ELT</span>
+        </div>
+      </div>
+
+      <div class="sk-group">
+        <div class="sk-label">Analytics &amp; Visualization</div>
+        <div class="sk-tags">
+          <span class="sk-tag"><i class="devicon-python-plain colored"></i>Power BI</span>
+          <span class="sk-tag"><i class="devicon-r-plain colored"></i>R</span>
+          <span class="sk-tag"><i class="devicon-python-plain colored"></i>Python</span>
+          <span class="sk-tag"><i class="devicon-pandas-plain colored"></i>Pandas</span>
+          <span class="sk-tag"><i class="devicon-numpy-plain colored"></i>NumPy</span>
+        </div>
+      </div>
+
+      <div class="sk-group">
+        <div class="sk-label">ML &amp; NLP</div>
+        <div class="sk-tags">
+          <span class="sk-tag"><i class="devicon-pytorch-plain colored"></i>RoBERTa</span>
+          <span class="sk-tag"><i class="devicon-pytorch-plain colored"></i>BART</span>
+          <span class="sk-tag"><i class="devicon-python-plain colored"></i>XGBoost</span>
+          <span class="sk-tag"><i class="devicon-scikitlearn-plain colored"></i>Scikit-learn</span>
+          <span class="sk-tag"><i class="devicon-tensorflow-original colored"></i>TensorFlow</span>
+        </div>
+      </div>
+
+      <div class="sk-group">
+        <div class="sk-label">Data Tools</div>
+        <div class="sk-tags">
+          <span class="sk-tag"><i class="devicon-microsoftsqlserver-plain colored"></i>SSIS</span>
+          <span class="sk-tag"><i class="devicon-microsoftsqlserver-plain colored"></i>SSMS</span>
+          <span class="sk-tag"><i class="devicon-jupyter-plain colored"></i>Jupyter</span>
+          <span class="sk-tag"><i class="devicon-kaggle-plain colored"></i>KoboToolbox</span>
+          <span class="sk-tag"><i class="devicon-dbeaver-plain colored"></i>DBeaver</span>
+        </div>
+      </div>
+
+      <div class="sk-group">
+        <div class="sk-label">Web Scraping</div>
+        <div class="sk-tags">
+          <span class="sk-tag"><i class="devicon-python-plain colored"></i>BeautifulSoup</span>
+          <span class="sk-tag"><i class="devicon-selenium-plain colored"></i>Selenium</span>
+          <span class="sk-tag"><i class="devicon-fastapi-plain colored"></i>REST APIs</span>
+        </div>
+      </div>
+
+      <div class="sk-group">
+        <div class="sk-label">Tools &amp; Workflow</div>
+        <div class="sk-tags">
+          <span class="sk-tag"><i class="devicon-git-plain colored"></i>Git</span>
+          <span class="sk-tag"><i class="devicon-github-original"></i>GitHub</span>
+          <span class="sk-tag"><i class="devicon-jira-plain colored"></i>Jira</span>
+          <span class="sk-tag"><i class="devicon-vscode-plain colored"></i>VS Code</span>
+          <span class="sk-tag"><i class="devicon-linux-plain"></i>Linux</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-header reveal">
+    <div class="section-eyebrow">Work history</div>
+    <h2 class="section-title">Experience</h2>
+  </div>
+
+  <!-- Toggle -->
+  <div class="exp-toggle-wrap reveal">
+    <button class="exp-toggle-btn active" data-view="timeline">Timeline</button>
+    <button class="exp-toggle-btn" data-view="list">List</button>
+  </div>
+
+  <!-- TIMELINE VIEW -->
+  <div class="exp-timeline" id="exp-timeline">
+    <!-- spine -->
+    <div class="tl-spine"></div>
+    <div class="tl-spine-fill" id="tl-fill"></div>
+
+    <!-- Entry 1 -->
+    <div class="tl-entry tl-right reveal">
+      <div class="tl-dot">
+        <div class="tl-dot-inner"></div>
+      </div>
+      <div class="tl-year">2024 — Now</div>
+      <div class="tl-card">
+        <div class="tl-card-header">
+          <div class="tl-monogram"><img loading="lazy" src="assets/images/logo-impact.jpg" alt="IMPACT Initiatives"></div>
+          <div class="tl-card-title-block">
+            <div class="tl-card-title">Data Engineer — Sudan Mission</div>
+            <div class="tl-card-org">IMPACT Initiatives &middot; <span class="tl-loc">Nairobi, Kenya</span></div>
+          </div>
+          <div class="exp-badge"><span class="exp-badge-pulse"></span>Current</div>
+        </div>
+        <ul class="tl-bullets">
+          <li>Designed and built a PostgreSQL star schema database consolidating 10+ humanitarian data sources</li>
+          <li>Developed Python ELT pipelines with automated ingestion, spatial joins, and transformation</li>
+          <li>Built a 4-tier location matching system achieving 100% geographic coverage across all datasets</li>
+          <li>Created 10+ fact &amp; dimension views supporting 26+ months of time-series field data</li>
+          <li>Built Power BI dashboard with DAX measures and choropleth map across 55 admin clusters</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag">PostgreSQL</span><span class="exp-tag">Python</span><span class="exp-tag">ETL</span><span class="exp-tag">Power BI</span><span class="exp-tag">Star Schema</span><span class="exp-tag">Azure</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Entry 2 -->
+    <div class="tl-entry tl-left reveal">
+      <div class="tl-dot">
+        <div class="tl-dot-inner"></div>
+      </div>
+      <div class="tl-year">Feb — Jun 2024</div>
+      <div class="tl-card">
+        <div class="tl-card-header">
+          <div class="tl-monogram"><img loading="lazy" src="assets/images/logo-impact-libya.jpg" alt="IMPACT Initiatives"></div>
+          <div class="tl-card-title-block">
+            <div class="tl-card-title">Data Analyst — Libya Mission</div>
+            <div class="tl-card-org">IMPACT Initiatives &middot; <span class="tl-loc">Tunis, Tunisia</span></div>
+          </div>
+        </div>
+        <ul class="tl-bullets">
+          <li>Processed and cleaned 5,000+ survey responses via KoboToolbox across multiple assessment cycles</li>
+          <li>Built Power BI dashboards visualizing humanitarian indicators across 8 governorates</li>
+          <li>Conducted analysis in R and Python to support situation reports and partner briefings</li>
+          <li>Trained 5+ partner organizations on KoboToolbox and data quality best practices</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag">KoboToolbox</span><span class="exp-tag">Power BI</span><span class="exp-tag">R</span><span class="exp-tag">Python</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Entry 3 -->
+    <div class="tl-entry tl-right reveal">
+      <div class="tl-dot">
+        <div class="tl-dot-inner"></div>
+      </div>
+      <div class="tl-year">Feb — Jun 2024</div>
+      <div class="tl-card">
+        <div class="tl-card-header">
+          <div class="tl-monogram"><img loading="lazy" src="assets/images/logo-vermeg.jpg" alt="VERMEG"></div>
+          <div class="tl-card-title-block">
+            <div class="tl-card-title">Data Scientist</div>
+            <div class="tl-card-org">VERMEG &middot; <span class="tl-loc">Tunis, Tunisia</span></div>
+          </div>
+        </div>
+        <ul class="tl-bullets">
+          <li>Automated email classification using RoBERTa and DeBERTa achieving 92% accuracy</li>
+          <li>Built intelligent summarization pipeline with BART to accelerate decision-making</li>
+          <li>Developed sentiment analysis to prioritize critical response tickets</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag">RoBERTa</span><span class="exp-tag">DeBERTa</span><span class="exp-tag">BART</span><span class="exp-tag">NLP</span><span class="exp-tag">Python</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Entry 4 -->
+    <div class="tl-entry tl-left reveal">
+      <div class="tl-dot">
+        <div class="tl-dot-inner"></div>
+      </div>
+      <div class="tl-year">Jul — Aug 2023</div>
+      <div class="tl-card">
+        <div class="tl-card-header">
+          <div class="tl-monogram"><img loading="lazy" src="assets/images/logo-esprit.png" alt="Wimbee"></div>
+          <div class="tl-card-title-block">
+            <div class="tl-card-title">BI Analyst Intern</div>
+            <div class="tl-card-org">Wimbee &middot; <span class="tl-loc">Tunis, Tunisia</span></div>
+          </div>
+        </div>
+        <ul class="tl-bullets">
+          <li>Built a Power BI dashboard improving sales tracking by 15%</li>
+          <li>Enhanced data collection pipeline using Talend ETL</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag">Power BI</span><span class="exp-tag">Talend</span><span class="exp-tag">ETL</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /timeline -->
+
+  <!-- LIST VIEW (original, hidden by default) -->
+  <div class="exp-list" id="exp-list" style="display:none;">
+    <div class="exp-item">
+      <div class="exp-left">
+        <div class="exp-date">Jun 2024 — Present</div>
+        <div class="exp-org">IMPACT Initiatives</div>
+        <div class="exp-loc">Nairobi, Kenya</div>
+      </div>
+      <div class="exp-right">
+        <div class="exp-badge"><span class="exp-badge-pulse"></span>Current</div>
+        <div class="exp-title">Data Engineer — Sudan Mission</div>
+        <ul class="exp-bullets">
+          <li>Designed and built a PostgreSQL star schema database consolidating 10+ humanitarian data sources</li>
+          <li>Developed Python ELT pipelines with automated ingestion, spatial joins, and transformation</li>
+          <li>Built a 4-tier location matching system achieving 100% geographic coverage across all datasets</li>
+          <li>Created 10+ fact and dimension views supporting 26+ months of time-series field data</li>
+          <li>Built Power BI dashboard with DAX measures and choropleth map across 55 admin clusters</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag">PostgreSQL</span><span class="exp-tag">Python</span><span class="exp-tag">ETL</span><span class="exp-tag">Power BI</span><span class="exp-tag">Star Schema</span><span class="exp-tag">Azure</span>
+        </div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-left">
+        <div class="exp-date">Feb 2024 — Jun 2024</div>
+        <div class="exp-org">IMPACT Initiatives</div>
+        <div class="exp-loc">Tunis, Tunisia</div>
+      </div>
+      <div class="exp-right">
+        <div class="exp-title">Data Analyst — Libya Mission</div>
+        <ul class="exp-bullets">
+          <li>Processed and cleaned 5,000+ survey responses via KoboToolbox across multiple assessment cycles</li>
+          <li>Built Power BI dashboards visualizing humanitarian indicators across 8 governorates</li>
+          <li>Conducted analysis in R and Python to support situation reports and partner briefings</li>
+          <li>Trained 5+ partner organizations on KoboToolbox and data quality best practices</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag">KoboToolbox</span><span class="exp-tag">Power BI</span><span class="exp-tag">R</span><span class="exp-tag">Python</span>
+        </div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-left">
+        <div class="exp-date">Feb 2024 — Jun 2024</div>
+        <div class="exp-org">VERMEG</div>
+        <div class="exp-loc">Tunis, Tunisia</div>
+      </div>
+      <div class="exp-right">
+        <div class="exp-title">Data Scientist</div>
+        <ul class="exp-bullets">
+          <li>Automated email classification using RoBERTa and DeBERTa achieving 92% accuracy</li>
+          <li>Built intelligent summarization pipeline with BART to accelerate decision-making</li>
+          <li>Developed sentiment analysis to prioritize critical response tickets</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag">RoBERTa</span><span class="exp-tag">DeBERTa</span><span class="exp-tag">BART</span><span class="exp-tag">NLP</span><span class="exp-tag">Python</span>
+        </div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-left">
+        <div class="exp-date">Jul 2023 — Aug 2023</div>
+        <div class="exp-org">Wimbee</div>
+        <div class="exp-loc">Tunis, Tunisia</div>
+      </div>
+      <div class="exp-right">
+        <div class="exp-title">BI Analyst Intern</div>
+        <ul class="exp-bullets">
+          <li>Built a Power BI dashboard improving sales tracking by 15%</li>
+          <li>Enhanced data collection pipeline using Talend ETL</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag">Power BI</span><span class="exp-tag">Talend</span><span class="exp-tag">ETL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+<!-- PROJECTS -->
+<section id="projects" style="padding:0;max-width:100%;background:var(--bg2);">
+  <div style="max-width:1100px;margin:0 auto;padding:5rem 4rem 2.5rem;">
+    <div class="section-header reveal" style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+      <div>
+        <div class="section-eyebrow">Selected work</div>
+        <h2 class="section-title">Projects</h2>
+      </div>
+      <div id="proj-view-btns" style="display:flex;gap:0;border:1px solid var(--border);margin-bottom:0.25rem;">
+        <button id="view-slider" onclick="setProjectView('slider')" style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;padding:8px 18px;border:none;background:var(--ink);color:var(--bg);cursor:pointer;transition:background 0.2s,color 0.2s;">Slider</button>
+        <button id="view-grid" onclick="setProjectView('grid')" style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;padding:8px 18px;border:none;background:none;color:var(--ink2);cursor:pointer;transition:background 0.2s,color 0.2s;">Grid</button>
+      </div>
+    </div>
+  </div>
+  <div style="position:relative;width:100vw;max-width:100%;overflow:hidden;" class="reveal">
+    <div id="ps-track" style="display:flex;flex-wrap:nowrap;transition:transform 0.65s cubic-bezier(0.77,0,0.175,1);will-change:transform;width:100%;">
+<div style="width:100vw;max-width:100%;flex-shrink:0;display:grid;grid-template-columns:1fr 1fr;height:520px;overflow:hidden;">
+      <div style="padding:3rem 3.5rem;display:flex;flex-direction:column;justify-content:center;background:var(--bg);overflow:hidden;">
+        <div style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:0.75rem;">Sports Analytics</div>
+        <div style="font-family:Fraunces,serif;font-size:13px;font-weight:300;color:var(--ink3);margin-bottom:0.5rem;">01 / 06</div>
+        <h3 style="font-family:Fraunces,serif;font-size:clamp(20px,2vw,30px);font-weight:300;line-height:1.2;margin-bottom:1rem;color:var(--ink);">Olympic Games 2024 Dashboard</h3>
+        <p style="font-size:12px;color:var(--ink2);line-height:1.7;margin-bottom:1.2rem;">Interactive Power BI dashboard visualizing athlete performance, medal counts by country, and trends across the Paris 2024 Olympic Games. 3 report pages covering overview, athletes, and country analysis.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;"><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">Power BI</span><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">DAX</span><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">Data Modeling</span><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">Bing Maps</span></div>
+        <a href="https://github.com/imen-ayadi/Olympics_2024" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:5px;font-size:11px;padding:5px 12px;border:1px solid rgba(26,24,20,0.15);color:var(--teal);text-decoration:none;margin-top:10px;transition:background 0.2s;" onmouseover="this.style.background='var(--teal-light)'" onmouseout="this.style.background='transparent'">&#8599; View on GitHub</a>
+      </div>
+      <div style="position:relative;overflow:hidden;background:#f8f8f8;height:520px;"><img loading="lazy" class="pimg" src="assets/images/proj1-img1.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f8f8f8;opacity:1;transition:opacity 0.5s;"><img loading="lazy" class="pimg" src="assets/images/proj1-img2.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f8f8f8;opacity:0;transition:opacity 0.5s;"><img loading="lazy" class="pimg" src="assets/images/proj1-img3.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f8f8f8;opacity:0;transition:opacity 0.5s;"><div style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:5px;z-index:2;"><span class="pidot" data-pi="0" style="width:7px;height:7px;border-radius:50%;background:#333;opacity:1;cursor:pointer;display:inline-block;"></span><span class="pidot" data-pi="1" style="width:7px;height:7px;border-radius:50%;background:#333;opacity:0.3;cursor:pointer;display:inline-block;"></span><span class="pidot" data-pi="2" style="width:7px;height:7px;border-radius:50%;background:#333;opacity:0.3;cursor:pointer;display:inline-block;"></span></div><button class="pimg-prev" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.2);color:#333;border:none;width:32px;height:32px;cursor:pointer;font-size:20px;z-index:2;display:flex;align-items:center;justify-content:center;">&#8249;</button><button class="pimg-next" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.2);color:#333;border:none;width:32px;height:32px;cursor:pointer;font-size:20px;z-index:2;display:flex;align-items:center;justify-content:center;">&#8250;</button></div>
+    </div>
+<div style="width:100vw;max-width:100%;flex-shrink:0;display:grid;grid-template-columns:1fr 1fr;height:520px;overflow:hidden;">
+      <div style="padding:3rem 3.5rem;display:flex;flex-direction:column;justify-content:center;background:var(--bg);overflow:hidden;">
+        <div style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:0.75rem;">Healthcare · 55K records</div>
+        <div style="font-family:Fraunces,serif;font-size:13px;font-weight:300;color:var(--ink3);margin-bottom:0.5rem;">02 / 06</div>
+        <h3 style="font-family:Fraunces,serif;font-size:clamp(20px,2vw,30px);font-weight:300;line-height:1.2;margin-bottom:1rem;color:var(--ink);">National Health Analysis</h3>
+        <p style="font-size:12px;color:var(--ink2);line-height:1.7;margin-bottom:1.2rem;">Healthcare analytics dashboard analyzing 55,500 patient records across 10 major U.S. hospitals (2019–2024). Covers patient demographics, admissions, billing costs, medical conditions, and treatment outcomes.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;"><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">Power BI</span><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">Excel</span><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">DAX</span><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">Power Query</span></div>
+        <a href="https://github.com/imen-ayadi/-National-Health-Analysis-Power-BI-Dashboard" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:5px;font-size:11px;padding:5px 12px;border:1px solid rgba(26,24,20,0.15);color:var(--teal);text-decoration:none;margin-top:10px;transition:background 0.2s;" onmouseover="this.style.background='var(--teal-light)'" onmouseout="this.style.background='transparent'">&#8599; View on GitHub</a>
+      </div>
+      <div style="position:relative;overflow:hidden;background:#f8f8f8;height:520px;"><img loading="lazy" class="pimg" src="assets/images/proj2-img1.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f8f8f8;opacity:1;transition:opacity 0.5s;"><img loading="lazy" class="pimg" src="assets/images/proj2-img2.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f8f8f8;opacity:0;transition:opacity 0.5s;"><img loading="lazy" class="pimg" src="assets/images/proj2-img3.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f8f8f8;opacity:0;transition:opacity 0.5s;"><div style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:5px;z-index:2;"><span class="pidot" data-pi="0" style="width:7px;height:7px;border-radius:50%;background:#333;opacity:1;cursor:pointer;display:inline-block;"></span><span class="pidot" data-pi="1" style="width:7px;height:7px;border-radius:50%;background:#333;opacity:0.3;cursor:pointer;display:inline-block;"></span><span class="pidot" data-pi="2" style="width:7px;height:7px;border-radius:50%;background:#333;opacity:0.3;cursor:pointer;display:inline-block;"></span></div><button class="pimg-prev" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.2);color:#333;border:none;width:32px;height:32px;cursor:pointer;font-size:20px;z-index:2;display:flex;align-items:center;justify-content:center;">&#8249;</button><button class="pimg-next" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.2);color:#333;border:none;width:32px;height:32px;cursor:pointer;font-size:20px;z-index:2;display:flex;align-items:center;justify-content:center;">&#8250;</button></div>
+    </div>
+<div style="width:100vw;max-width:100%;flex-shrink:0;display:grid;grid-template-columns:1fr 1fr;height:520px;overflow:hidden;">
+      <div style="padding:3rem 3.5rem;display:flex;flex-direction:column;justify-content:center;background:var(--bg);overflow:hidden;">
+        <div style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:0.75rem;">Humanitarian</div>
+        <div style="font-family:Fraunces,serif;font-size:13px;font-weight:300;color:var(--ink3);margin-bottom:0.5rem;">03 / 06</div>
+        <h3 style="font-family:Fraunces,serif;font-size:clamp(20px,2vw,30px);font-weight:300;line-height:1.2;margin-bottom:1rem;color:var(--ink);">Palestine-Israel Conflict Dashboard</h3>
+        <p style="font-size:12px;color:var(--ink2);line-height:1.7;margin-bottom:1.2rem;">Multi-page Power BI dashboard analyzing the Palestine-Israel conflict — covering casualties, infrastructure damage, journalists killed, geographic breakdown, and financial impact.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;"><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">Power BI</span><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">DAX</span><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">Data Journalism</span><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">Humanitarian</span></div>
+        <a href="https://github.com/imen-ayadi/Palestine-Israel-Conflict-Power-BI-Dashboard" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:5px;font-size:11px;padding:5px 12px;border:1px solid rgba(26,24,20,0.15);color:var(--teal);text-decoration:none;margin-top:10px;transition:background 0.2s;" onmouseover="this.style.background='var(--teal-light)'" onmouseout="this.style.background='transparent'">&#8599; View on GitHub</a>
+      </div>
+      <div style="position:relative;overflow:hidden;background:#f8f8f8;height:520px;"><img loading="lazy" class="pimg" src="assets/images/proj3-img1.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f8f8f8;opacity:1;transition:opacity 0.5s;"><img loading="lazy" class="pimg" src="assets/images/proj3-img2.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f8f8f8;opacity:0;transition:opacity 0.5s;"><img loading="lazy" class="pimg" src="assets/images/proj3-img3.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f8f8f8;opacity:0;transition:opacity 0.5s;"><img loading="lazy" class="pimg" src="assets/images/proj3-img4.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f8f8f8;opacity:0;transition:opacity 0.5s;"><img loading="lazy" class="pimg" src="assets/images/proj3-img5.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f8f8f8;opacity:0;transition:opacity 0.5s;"><img loading="lazy" class="pimg" src="assets/images/proj3-img6.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f8f8f8;opacity:0;transition:opacity 0.5s;"><div style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:5px;z-index:2;"><span class="pidot" data-pi="0" style="width:7px;height:7px;border-radius:50%;background:#333;opacity:1;cursor:pointer;display:inline-block;"></span><span class="pidot" data-pi="1" style="width:7px;height:7px;border-radius:50%;background:#333;opacity:0.3;cursor:pointer;display:inline-block;"></span><span class="pidot" data-pi="2" style="width:7px;height:7px;border-radius:50%;background:#333;opacity:0.3;cursor:pointer;display:inline-block;"></span><span class="pidot" data-pi="3" style="width:7px;height:7px;border-radius:50%;background:#333;opacity:0.3;cursor:pointer;display:inline-block;"></span><span class="pidot" data-pi="4" style="width:7px;height:7px;border-radius:50%;background:#333;opacity:0.3;cursor:pointer;display:inline-block;"></span><span class="pidot" data-pi="5" style="width:7px;height:7px;border-radius:50%;background:#333;opacity:0.3;cursor:pointer;display:inline-block;"></span></div><button class="pimg-prev" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.2);color:#333;border:none;width:32px;height:32px;cursor:pointer;font-size:20px;z-index:2;display:flex;align-items:center;justify-content:center;">&#8249;</button><button class="pimg-next" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.2);color:#333;border:none;width:32px;height:32px;cursor:pointer;font-size:20px;z-index:2;display:flex;align-items:center;justify-content:center;">&#8250;</button></div>
+    </div>
+<div style="width:100vw;max-width:100%;flex-shrink:0;display:grid;grid-template-columns:1fr 1fr;height:520px;overflow:hidden;">
+      <div style="padding:3rem 3.5rem;display:flex;flex-direction:column;justify-content:center;background:var(--bg);overflow:hidden;">
+        <div style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:0.75rem;">Award winner 2023</div>
+        <div style="font-family:Fraunces,serif;font-size:13px;font-weight:300;color:var(--ink3);margin-bottom:0.5rem;">04 / 06</div>
+        <h3 style="font-family:Fraunces,serif;font-size:clamp(20px,2vw,30px);font-weight:300;line-height:1.2;margin-bottom:1rem;color:var(--ink);">Olist Sales Analysis</h3>
+        <p style="font-size:12px;color:var(--ink2);line-height:1.7;margin-bottom:1.2rem;">End-to-end e-commerce analytics on 99K+ Olist orders — ETL with Talend, star schema data warehouse, Power BI dashboards, and customer satisfaction prediction using XGBoost (88.4% accuracy).</p>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;"><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">Power BI</span><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">XGBoost</span><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">Talend ETL</span><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">Python</span><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">ML</span></div>
+        <a href="https://github.com/imen-ayadi/Olist" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:5px;font-size:11px;padding:5px 12px;border:1px solid rgba(26,24,20,0.15);color:var(--teal);text-decoration:none;margin-top:10px;transition:background 0.2s;" onmouseover="this.style.background='var(--teal-light)'" onmouseout="this.style.background='transparent'">&#8599; View on GitHub</a>
+      </div>
+      <div style="position:relative;overflow:hidden;background:#f8f8f8;height:520px;"><img loading="lazy" class="pimg" src="assets/images/proj4-img1.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f8f8f8;opacity:1;transition:opacity 0.5s;"><img loading="lazy" class="pimg" src="assets/images/proj4-img2.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f8f8f8;opacity:0;transition:opacity 0.5s;"><img loading="lazy" class="pimg" src="assets/images/proj4-img3.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f8f8f8;opacity:0;transition:opacity 0.5s;"><img loading="lazy" class="pimg" src="assets/images/proj4-img4.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f8f8f8;opacity:0;transition:opacity 0.5s;"><img loading="lazy" class="pimg" src="assets/images/proj4-img5.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f8f8f8;opacity:0;transition:opacity 0.5s;"><img loading="lazy" class="pimg" src="assets/images/proj4-img6.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f8f8f8;opacity:0;transition:opacity 0.5s;"><img loading="lazy" class="pimg" src="assets/images/proj4-img7.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f8f8f8;opacity:0;transition:opacity 0.5s;"><img loading="lazy" class="pimg" src="assets/images/proj4-img8.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f8f8f8;opacity:0;transition:opacity 0.5s;"><img loading="lazy" class="pimg" src="assets/images/proj4-img9.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f8f8f8;opacity:0;transition:opacity 0.5s;"><img loading="lazy" class="pimg" src="assets/images/proj4-img10.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f8f8f8;opacity:0;transition:opacity 0.5s;"><img loading="lazy" class="pimg" src="assets/images/proj4-img11.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f8f8f8;opacity:0;transition:opacity 0.5s;"><div style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:5px;z-index:2;"><span class="pidot" data-pi="0" style="width:7px;height:7px;border-radius:50%;background:#333;opacity:1;cursor:pointer;display:inline-block;"></span><span class="pidot" data-pi="1" style="width:7px;height:7px;border-radius:50%;background:#333;opacity:0.3;cursor:pointer;display:inline-block;"></span><span class="pidot" data-pi="2" style="width:7px;height:7px;border-radius:50%;background:#333;opacity:0.3;cursor:pointer;display:inline-block;"></span><span class="pidot" data-pi="3" style="width:7px;height:7px;border-radius:50%;background:#333;opacity:0.3;cursor:pointer;display:inline-block;"></span><span class="pidot" data-pi="4" style="width:7px;height:7px;border-radius:50%;background:#333;opacity:0.3;cursor:pointer;display:inline-block;"></span><span class="pidot" data-pi="5" style="width:7px;height:7px;border-radius:50%;background:#333;opacity:0.3;cursor:pointer;display:inline-block;"></span><span class="pidot" data-pi="6" style="width:7px;height:7px;border-radius:50%;background:#333;opacity:0.3;cursor:pointer;display:inline-block;"></span><span class="pidot" data-pi="7" style="width:7px;height:7px;border-radius:50%;background:#333;opacity:0.3;cursor:pointer;display:inline-block;"></span><span class="pidot" data-pi="8" style="width:7px;height:7px;border-radius:50%;background:#333;opacity:0.3;cursor:pointer;display:inline-block;"></span><span class="pidot" data-pi="9" style="width:7px;height:7px;border-radius:50%;background:#333;opacity:0.3;cursor:pointer;display:inline-block;"></span><span class="pidot" data-pi="10" style="width:7px;height:7px;border-radius:50%;background:#333;opacity:0.3;cursor:pointer;display:inline-block;"></span></div><button class="pimg-prev" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.2);color:#333;border:none;width:32px;height:32px;cursor:pointer;font-size:20px;z-index:2;display:flex;align-items:center;justify-content:center;">&#8249;</button><button class="pimg-next" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.2);color:#333;border:none;width:32px;height:32px;cursor:pointer;font-size:20px;z-index:2;display:flex;align-items:center;justify-content:center;">&#8250;</button></div>
+    </div>
+<div style="width:100vw;max-width:100%;flex-shrink:0;display:grid;grid-template-columns:1fr 1fr;height:520px;overflow:hidden;">
+      <div style="padding:3rem 3.5rem;display:flex;flex-direction:column;justify-content:center;background:var(--bg);overflow:hidden;">
+        <div style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:0.75rem;">Streaming Analytics</div>
+        <div style="font-family:Fraunces,serif;font-size:13px;font-weight:300;color:var(--ink3);margin-bottom:0.5rem;">05 / 06</div>
+        <h3 style="font-family:Fraunces,serif;font-size:clamp(20px,2vw,30px);font-weight:300;line-height:1.2;margin-bottom:1rem;color:var(--ink);">Prime Video Analytics Dashboard</h3>
+        <p style="font-size:12px;color:var(--ink2);line-height:1.7;margin-bottom:1.2rem;">Power BI dashboard analyzing 9,655 Prime Video titles from 1920 to 2021. Covers top genres, ratings distribution, regional viewership by country, and release year trends.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;"><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">Power BI</span><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">DAX</span><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">Data Analytics</span><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">Visualization</span></div>
+        <a href="https://github.com/imen-ayadi/Primevideo" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:5px;font-size:11px;padding:5px 12px;border:1px solid rgba(26,24,20,0.15);color:var(--teal);text-decoration:none;margin-top:10px;transition:background 0.2s;" onmouseover="this.style.background='var(--teal-light)'" onmouseout="this.style.background='transparent'">&#8599; View on GitHub</a>
+      </div>
+      <div style="position:relative;overflow:hidden;background:#0f171e;height:520px;"><img loading="lazy" class="pimg" src="assets/images/proj5-img1.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#0f171e;opacity:1;transition:opacity 0.5s;"><div style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:5px;z-index:2;"><span class="pidot" data-pi="0" style="width:7px;height:7px;border-radius:50%;background:white;opacity:1;cursor:pointer;display:inline-block;"></span></div><button class="pimg-prev" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.2);color:white;border:none;width:32px;height:32px;cursor:pointer;font-size:20px;z-index:2;display:flex;align-items:center;justify-content:center;">&#8249;</button><button class="pimg-next" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.2);color:white;border:none;width:32px;height:32px;cursor:pointer;font-size:20px;z-index:2;display:flex;align-items:center;justify-content:center;">&#8250;</button></div>
+    </div>
+<div style="width:100vw;max-width:100%;flex-shrink:0;display:grid;grid-template-columns:1fr 1fr;height:520px;overflow:hidden;">
+      <div style="padding:3rem 3.5rem;display:flex;flex-direction:column;justify-content:center;background:var(--bg);overflow:hidden;">
+        <div style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:0.75rem;">HR Analytics</div>
+        <div style="font-family:Fraunces,serif;font-size:13px;font-weight:300;color:var(--ink3);margin-bottom:0.5rem;">06 / 06</div>
+        <h3 style="font-family:Fraunces,serif;font-size:clamp(20px,2vw,30px);font-weight:300;line-height:1.2;margin-bottom:1rem;color:var(--ink);">HR Analysis Dashboard</h3>
+        <p style="font-size:12px;color:var(--ink2);line-height:1.7;margin-bottom:1.2rem;">Power BI dashboard tracking 311 employees across departments — headcount, turnover rate (33%), salary distribution ($21M total), recruitment sources, performance ratings, and satisfaction.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;"><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">Power BI</span><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">DAX</span><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">HR Analytics</span><span style="font-size:11px;padding:3px 10px;border:1px solid rgba(26,24,20,0.15);color:var(--ink2);">Visualization</span></div>
+        <a href="https://github.com/imen-ayadi?tab=repositories" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:5px;font-size:11px;padding:5px 12px;border:1px solid rgba(26,24,20,0.15);color:var(--teal);text-decoration:none;margin-top:10px;transition:background 0.2s;" onmouseover="this.style.background='var(--teal-light)'" onmouseout="this.style.background='transparent'">&#8599; View on GitHub</a>
+      </div>
+      <div style="position:relative;overflow:hidden;background:#f8f8f8;height:520px;"><img loading="lazy" class="pimg" src="assets/images/proj6-img1.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f8f8f8;opacity:1;transition:opacity 0.5s;"><div style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:5px;z-index:2;"><span class="pidot" data-pi="0" style="width:7px;height:7px;border-radius:50%;background:#333;opacity:1;cursor:pointer;display:inline-block;"></span></div><button class="pimg-prev" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.2);color:#333;border:none;width:32px;height:32px;cursor:pointer;font-size:20px;z-index:2;display:flex;align-items:center;justify-content:center;">&#8249;</button><button class="pimg-next" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.2);color:#333;border:none;width:32px;height:32px;cursor:pointer;font-size:20px;z-index:2;display:flex;align-items:center;justify-content:center;">&#8250;</button></div>
+    </div>
+</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:1.5rem;padding:1.25rem 4rem;background:var(--bg);border-top:1px solid var(--border);">
+      <button id="ps-prev" style="font-size:16px;background:none;border:1px solid var(--border);width:42px;height:42px;cursor:pointer;color:var(--ink);display:flex;align-items:center;justify-content:center;" onmouseover="this.style.background='var(--ink)';this.style.color='var(--bg)'" onmouseout="this.style.background='none';this.style.color='var(--ink)'">&#8592;</button>
+      <div style="font-family:Fraunces,serif;font-size:18px;font-weight:300;color:var(--ink2);"><span id="ps-cur">01</span>&nbsp;/&nbsp;06</div>
+      <button id="ps-next" style="font-size:16px;background:none;border:1px solid var(--border);width:42px;height:42px;cursor:pointer;color:var(--ink);display:flex;align-items:center;justify-content:center;" onmouseover="this.style.background='var(--ink)';this.style.color='var(--bg)'" onmouseout="this.style.background='none';this.style.color='var(--ink)'">&#8594;</button>
+    </div>
+    <div style="display:flex;padding:0.75rem 4rem 1.5rem;background:var(--bg);"><span class="ps-dot  ps-dot-active" data-i="0" style="display:inline-block;width:40px;height:2px;background:var(--teal);cursor:pointer;transition:background 0.2s,width 0.3s;margin-right:6px;"></span><span class="ps-dot" data-i="1" style="display:inline-block;width:24px;height:2px;background:var(--border);cursor:pointer;transition:background 0.2s,width 0.3s;margin-right:6px;"></span><span class="ps-dot" data-i="2" style="display:inline-block;width:24px;height:2px;background:var(--border);cursor:pointer;transition:background 0.2s,width 0.3s;margin-right:6px;"></span><span class="ps-dot" data-i="3" style="display:inline-block;width:24px;height:2px;background:var(--border);cursor:pointer;transition:background 0.2s,width 0.3s;margin-right:6px;"></span><span class="ps-dot" data-i="4" style="display:inline-block;width:24px;height:2px;background:var(--border);cursor:pointer;transition:background 0.2s,width 0.3s;margin-right:6px;"></span><span class="ps-dot" data-i="5" style="display:inline-block;width:24px;height:2px;background:var(--border);cursor:pointer;transition:background 0.2s,width 0.3s;margin-right:6px;"></span></div>
+  <div id="projects-grid" style="display:none;max-width:1100px;margin:0 auto;padding:0 4rem 5rem;">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);">
+      <div style="background:var(--bg2);display:flex;flex-direction:column;transition:background 0.2s;" onmouseover="this.style.background='var(--bg)'" onmouseout="this.style.background='var(--bg2)'">
+        <div style="height:180px;overflow:hidden;"><img src="assets/images/proj1-img1.jpg" alt="Olympic Games 2024 Dashboard" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+        <div style="padding:1.5rem 1.75rem;flex:1;display:flex;flex-direction:column;">
+          <div style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:0.5rem;">Sports Analytics</div>
+          <div style="font-family:Fraunces,serif;font-size:17px;font-weight:300;margin-bottom:0.5rem;">Olympic Games 2024 Dashboard</div>
+          <p style="font-size:12px;color:var(--ink2);line-height:1.7;flex:1;margin-bottom:1rem;">Interactive Power BI dashboard visualizing athlete performance, medal counts by country and sport.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:1rem;"><span style="font-size:10px;padding:2px 8px;border:1px solid var(--border);color:var(--ink3);">Power BI</span><span style="font-size:10px;padding:2px 8px;border:1px solid var(--border);color:var(--ink3);">DAX</span><span style="font-size:10px;padding:2px 8px;border:1px solid var(--border);color:var(--ink3);">Data Modeling</span><span style="font-size:10px;padding:2px 8px;border:1px solid var(--border);color:var(--ink3);">Bing Maps</span></div>
+          <a href="https://github.com/imen-ayadi/Olympics_2024" target="_blank" rel="noopener" style="font-size:11px;color:var(--teal);text-decoration:none;">&#8599; GitHub</a>
+        </div>
+      </div>
+      <div style="background:var(--bg2);display:flex;flex-direction:column;transition:background 0.2s;" onmouseover="this.style.background='var(--bg)'" onmouseout="this.style.background='var(--bg2)'">
+        <div style="height:180px;overflow:hidden;"><img src="assets/images/proj2-img1.png" alt="National Health Analysis" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+        <div style="padding:1.5rem 1.75rem;flex:1;display:flex;flex-direction:column;">
+          <div style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:0.5rem;">Healthcare &middot; 55K records</div>
+          <div style="font-family:Fraunces,serif;font-size:17px;font-weight:300;margin-bottom:0.5rem;">National Health Analysis</div>
+          <p style="font-size:12px;color:var(--ink2);line-height:1.7;flex:1;margin-bottom:1rem;">Healthcare analytics dashboard analyzing 55,500 patient records across 10 major hospitals.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:1rem;"><span style="font-size:10px;padding:2px 8px;border:1px solid var(--border);color:var(--ink3);">Power BI</span><span style="font-size:10px;padding:2px 8px;border:1px solid var(--border);color:var(--ink3);">Excel</span><span style="font-size:10px;padding:2px 8px;border:1px solid var(--border);color:var(--ink3);">DAX</span><span style="font-size:10px;padding:2px 8px;border:1px solid var(--border);color:var(--ink3);">Power Query</span></div>
+          <a href="https://github.com/imen-ayadi/-National-Health-Analysis-Power-BI-Dashboard" target="_blank" rel="noopener" style="font-size:11px;color:var(--teal);text-decoration:none;">&#8599; GitHub</a>
+        </div>
+      </div>
+      <div style="background:var(--bg2);display:flex;flex-direction:column;transition:background 0.2s;" onmouseover="this.style.background='var(--bg)'" onmouseout="this.style.background='var(--bg2)'">
+        <div style="height:180px;overflow:hidden;"><img src="assets/images/proj3-img1.png" alt="Palestine-Israel Conflict Dashboard" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+        <div style="padding:1.5rem 1.75rem;flex:1;display:flex;flex-direction:column;">
+          <div style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:0.5rem;">Humanitarian</div>
+          <div style="font-family:Fraunces,serif;font-size:17px;font-weight:300;margin-bottom:0.5rem;">Palestine-Israel Conflict Dashboard</div>
+          <p style="font-size:12px;color:var(--ink2);line-height:1.7;flex:1;margin-bottom:1rem;">Multi-page Power BI dashboard analyzing the Palestine-Israel conflict data and humanitarian impact.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:1rem;"><span style="font-size:10px;padding:2px 8px;border:1px solid var(--border);color:var(--ink3);">Power BI</span><span style="font-size:10px;padding:2px 8px;border:1px solid var(--border);color:var(--ink3);">DAX</span><span style="font-size:10px;padding:2px 8px;border:1px solid var(--border);color:var(--ink3);">Data Journalism</span></div>
+          <a href="https://github.com/imen-ayadi/Palestine-Israel-Conflict-Power-BI-Dashboard" target="_blank" rel="noopener" style="font-size:11px;color:var(--teal);text-decoration:none;">&#8599; GitHub</a>
+        </div>
+      </div>
+      <div style="background:var(--bg2);display:flex;flex-direction:column;transition:background 0.2s;" onmouseover="this.style.background='var(--bg)'" onmouseout="this.style.background='var(--bg2)'">
+        <div style="height:180px;overflow:hidden;"><img src="assets/images/proj4-img1.png" alt="Olist Sales Analysis" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+        <div style="padding:1.5rem 1.75rem;flex:1;display:flex;flex-direction:column;">
+          <div style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:0.5rem;">Award winner 2023</div>
+          <div style="font-family:Fraunces,serif;font-size:17px;font-weight:300;margin-bottom:0.5rem;">Olist Sales Analysis</div>
+          <p style="font-size:12px;color:var(--ink2);line-height:1.7;flex:1;margin-bottom:1rem;">End-to-end e-commerce analytics on 99K+ Olist orders — ETL with Talend, star schema, XGBoost ML.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:1rem;"><span style="font-size:10px;padding:2px 8px;border:1px solid var(--border);color:var(--ink3);">Power BI</span><span style="font-size:10px;padding:2px 8px;border:1px solid var(--border);color:var(--ink3);">XGBoost</span><span style="font-size:10px;padding:2px 8px;border:1px solid var(--border);color:var(--ink3);">Talend ETL</span><span style="font-size:10px;padding:2px 8px;border:1px solid var(--border);color:var(--ink3);">Python</span></div>
+          <a href="https://github.com/imen-ayadi/Olist" target="_blank" rel="noopener" style="font-size:11px;color:var(--teal);text-decoration:none;">&#8599; GitHub</a>
+        </div>
+      </div>
+      <div style="background:var(--bg2);display:flex;flex-direction:column;transition:background 0.2s;" onmouseover="this.style.background='var(--bg)'" onmouseout="this.style.background='var(--bg2)'">
+        <div style="height:180px;overflow:hidden;"><img src="assets/images/proj5-img1.png" alt="Prime Video Analytics Dashboard" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+        <div style="padding:1.5rem 1.75rem;flex:1;display:flex;flex-direction:column;">
+          <div style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:0.5rem;">Streaming Analytics</div>
+          <div style="font-family:Fraunces,serif;font-size:17px;font-weight:300;margin-bottom:0.5rem;">Prime Video Analytics Dashboard</div>
+          <p style="font-size:12px;color:var(--ink2);line-height:1.7;flex:1;margin-bottom:1rem;">Power BI dashboard analyzing 9,655 Prime Video titles from 1920 to 2021.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:1rem;"><span style="font-size:10px;padding:2px 8px;border:1px solid var(--border);color:var(--ink3);">Power BI</span><span style="font-size:10px;padding:2px 8px;border:1px solid var(--border);color:var(--ink3);">DAX</span><span style="font-size:10px;padding:2px 8px;border:1px solid var(--border);color:var(--ink3);">Visualization</span></div>
+          <a href="https://github.com/imen-ayadi/Primevideo" target="_blank" rel="noopener" style="font-size:11px;color:var(--teal);text-decoration:none;">&#8599; GitHub</a>
+        </div>
+      </div>
+      <div style="background:var(--bg2);display:flex;flex-direction:column;transition:background 0.2s;" onmouseover="this.style.background='var(--bg)'" onmouseout="this.style.background='var(--bg2)'">
+        <div style="height:180px;overflow:hidden;"><img src="assets/images/proj6-img1.png" alt="HR Analysis Dashboard" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+        <div style="padding:1.5rem 1.75rem;flex:1;display:flex;flex-direction:column;">
+          <div style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:0.5rem;">HR Analytics</div>
+          <div style="font-family:Fraunces,serif;font-size:17px;font-weight:300;margin-bottom:0.5rem;">HR Analysis Dashboard</div>
+          <p style="font-size:12px;color:var(--ink2);line-height:1.7;flex:1;margin-bottom:1rem;">Power BI dashboard tracking 311 employees — headcount, turnover, satisfaction across departments.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:1rem;"><span style="font-size:10px;padding:2px 8px;border:1px solid var(--border);color:var(--ink3);">Power BI</span><span style="font-size:10px;padding:2px 8px;border:1px solid var(--border);color:var(--ink3);">DAX</span><span style="font-size:10px;padding:2px 8px;border:1px solid var(--border);color:var(--ink3);">HR Analytics</span></div>
+          <a href="https://github.com/imen-ayadi?tab=repositories" target="_blank" rel="noopener" style="font-size:11px;color:var(--teal);text-decoration:none;">&#8599; GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="section-header reveal">
+    <div class="section-eyebrow">Academic background</div>
+    <h2 class="section-title">Education</h2>
+  </div>
+  <div class="edu-grid reveal">
+
+    <div class="edu-card">
+      <div class="edu-top">
+        <div class="edu-degree-wrap">
+          <div class="edu-tag">MSc</div>
+          <div>
+            <div class="edu-degree">Data Analytics</div>
+            <div class="edu-school">ESB — Esprit School of Business</div>
+          </div>
+        </div>
+        <div class="edu-grade">
+          <div class="edu-grade-num">16.5<span>/20</span></div>
+          <div class="edu-grade-label">Final Grade</div>
+        </div>
+      </div>
+      <div class="edu-year">2022 — 2024</div>
+      <div class="edu-bar-wrap">
+        <div class="edu-bar" style="--pct: 82.5%"></div>
+      </div>
+      <div class="edu-topics">
+        <span class="edu-topic">Machine Learning</span>
+        <span class="edu-topic">Data Engineering</span>
+        <span class="edu-topic">Statistical Modelling</span>
+        <span class="edu-topic">NLP</span>
+        <span class="edu-topic">Business Intelligence</span>
+      </div>
+    </div>
+
+    <div class="edu-card">
+      <div class="edu-top">
+        <div class="edu-degree-wrap">
+          <div class="edu-tag">BSc</div>
+          <div>
+            <div class="edu-degree">Business Management <em>(Finance)</em></div>
+            <div class="edu-school">MSB — Mediterranean School of Business</div>
+          </div>
+        </div>
+        <div class="edu-grade">
+          <div class="edu-grade-num">3.16<span>/4</span></div>
+          <div class="edu-grade-label">GPA</div>
+        </div>
+      </div>
+      <div class="edu-year">2018 — 2021</div>
+      <div class="edu-bar-wrap">
+        <div class="edu-bar" style="--pct: 79%"></div>
+      </div>
+      <div class="edu-topics">
+        <span class="edu-topic">Corporate Finance</span>
+        <span class="edu-topic">Economics</span>
+        <span class="edu-topic">Accounting</span>
+        <span class="edu-topic">Strategy</span>
+        <span class="edu-topic">Marketing</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="section-header reveal">
+    <div class="section-eyebrow">Learning</div>
+    <h2 class="section-title">Certifications</h2>
+  </div>
+  <div class="cert-grid reveal">
+
+    <!-- 1: Gradio — link -->
+    <a class="cert-card cert-card-link" href="https://learn.deeplearning.ai/accomplishments/4ddd7965-9694-4008-b698-5dc606506c20?usp=sharing" target="_blank" rel="noopener">
+      <div class="cert-icon">&#x2B21;</div>
+      <div class="cert-body">
+        <div class="cert-name">Building Generative AI Applications with Gradio</div>
+        <div class="cert-issuer">DeepLearning.AI</div>
+      </div>
+      <div class="cert-arrow">&#x2197;</div>
+    </a>
+
+    <!-- 2: Hugging Face — link -->
+    <a class="cert-card cert-card-link" href="https://learn.deeplearning.ai/accomplishments/411ddd70-9340-4278-bcfa-bb625b88386b?usp=sharing" target="_blank" rel="noopener">
+      <div class="cert-icon">&#x2B21;</div>
+      <div class="cert-body">
+        <div class="cert-name">Open Source Models with Hugging Face</div>
+        <div class="cert-issuer">DeepLearning.AI</div>
+      </div>
+      <div class="cert-arrow">&#x2197;</div>
+    </a>
+
+    <!-- 3: Prompt Engineering — link -->
+    <a class="cert-card cert-card-link" href="https://learn.deeplearning.ai/accomplishments/c79457b2-5265-4715-b0cd-2d8a92f0c138?usp=sharing" target="_blank" rel="noopener">
+      <div class="cert-icon">&#x2B21;</div>
+      <div class="cert-body">
+        <div class="cert-name">Prompt Engineering with Llama 2 &amp; 3</div>
+        <div class="cert-issuer">DeepLearning.AI</div>
+      </div>
+      <div class="cert-arrow">&#x2197;</div>
+    </a>
+
+    <!-- 4: Python Data Structures — PDF verify link -->
+    <a class="cert-card cert-card-link" href="https://coursera.org/verify/TJZ656R3NBG7" target="_blank" rel="noopener">
+      <div class="cert-icon">&#x2B21;</div>
+      <div class="cert-body">
+        <div class="cert-name">Python Data Structures</div>
+        <div class="cert-issuer">University of Michigan &middot; Coursera &middot; May 2020</div>
+      </div>
+      <div class="cert-arrow">&#x2197;</div>
+    </a>
+
+    <!-- 5: Power BI — lightbox -->
+    <div class="cert-card cert-card-link" onclick="openCertModal('assets/images/cert-gradio.jpg','Introduction to Power BI — DataCamp')" style="cursor:pointer;">
+      <div class="cert-icon">&#x2B21;</div>
+      <div class="cert-body">
+        <div class="cert-name">Introduction to Power BI</div>
+        <div class="cert-issuer">DataCamp &middot; Nov 2023</div>
+      </div>
+      <div class="cert-arrow">&#x2197;</div>
+    </div>
+
+    <!-- 6: Deutsch A1 — lightbox -->
+    <div class="cert-card cert-card-link" onclick="openCertModal('assets/images/cert-powerbi.jpg','Deutsch A1 GER — Boosteno')" style="cursor:pointer;">
+      <div class="cert-icon">&#x2B21;</div>
+      <div class="cert-body">
+        <div class="cert-name">Deutsch A1 GER</div>
+        <div class="cert-issuer">Boosteno Sprachzentrum</div>
+      </div>
+      <div class="cert-arrow">&#x2197;</div>
+    </div>
+
+    <!-- 7: Award -->
+    <div class="cert-card">
+      <div class="cert-icon">&#x2B21;</div>
+      <div class="cert-body">
+        <div class="cert-name">Bal de Projet Award 2023</div>
+        <div class="cert-issuer">ESPRIT &middot; Sales Analysis &amp; XGBoost prediction</div>
+      </div>
+    </div>
+
+    <!-- 8: Business Game -->
+    <div class="cert-card">
+      <div class="cert-icon">&#x2B21;</div>
+      <div class="cert-body">
+        <div class="cert-name">Business Game 1st Prize</div>
+        <div class="cert-issuer">SMU &middot; 2021 &middot; Sales strategy &amp; cost optimization</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CERT MODAL -->
+<div id="cert-modal" style="display:none;position:fixed;inset:0;z-index:1000;background:rgba(26,24,20,0.85);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:2rem;" onclick="closeCertModal()">
+  <div style="max-width:860px;width:100%;position:relative;" onclick="event.stopPropagation()">
+    <button onclick="closeCertModal()" style="position:absolute;top:-2.5rem;right:0;background:none;border:none;color:#f7f5f0;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;opacity:0.7;">✕ Close</button>
+    <img id="cert-modal-img" src="" alt="" style="width:100%;display:block;border:1px solid rgba(255,255,255,0.1);">
+    <div id="cert-modal-label" style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.08em;color:rgba(247,245,240,0.5);margin-top:0.75rem;text-align:center;"></div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" style="padding:7rem 4rem;background:var(--ink);color:var(--bg);max-width:100%;">
+  <div class="contact-inner">
+    <div>
+      <h2 class="contact-title">Let&rsquo;s build something <em>together</em></h2>
+      <p class="contact-sub">Open to Data Engineer roles &mdash; on-site, hybrid or remote. Always happy to talk data, pipelines, or humanitarian tech.</p>
+      <div class="contact-links">
+        <!-- Email with copy button -->
+        <div style="display:flex;align-items:center;gap:10px;">
+          <a href="mailto:imenayadi86@gmail.com" class="contact-link">
+            <div class="contact-link-icon">
+              <!-- envelope SVG -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="17" height="17"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+            </div>
+            imenayadi86@gmail.com<span class="contact-link-arrow">→</span>
+          </a>
+          <button class="copy-email-btn" id="copyEmailBtn" aria-label="Copy email address">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span class="copy-toast" id="copyToast">Copied!</span>
+          </button>
+        </div>
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/imen-ayadi-29255617a/" target="_blank" rel="noopener" class="contact-link">
+          <div class="contact-link-icon">
+            <!-- LinkedIn SVG -->
+            <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          linkedin.com/in/imen-ayadi<span class="contact-link-arrow">→</span>
+        </a>
+        <!-- GitHub -->
+        <a href="https://github.com/imen-ayadi" target="_blank" rel="noopener" class="contact-link">
+          <div class="contact-link-icon">
+            <!-- GitHub Octocat SVG -->
+            <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+          </div>
+          github.com/imen-ayadi<span class="contact-link-arrow">→</span>
+        </a>
+      </div>
+    </div>
+    <div class="contact-right">
+
+      <!-- Location -->
+      <div class="contact-detail">
+        <div class="contact-detail-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-8-6.686-8-12a8 8 0 1 1 16 0c0 5.314-8 12-8 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        </div>
+        <div class="contact-detail-text">
+          <div class="contact-detail-label">Location</div>
+          <div class="contact-detail-val">Tunis, Tunisia</div>
+        </div>
+      </div>
+
+      <!-- Currently -->
+      <div class="contact-detail">
+        <div class="contact-detail-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+        </div>
+        <div class="contact-detail-text">
+          <div class="contact-detail-label">Currently</div>
+          <div class="contact-detail-val">IMPACT Initiatives<br><span style="color:rgba(247,245,240,0.5);font-size:11px;">Sudan Mission</span></div>
+        </div>
+      </div>
+
+      <!-- Open to -->
+      <div class="contact-detail">
+        <div class="contact-detail-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+        </div>
+        <div class="contact-detail-text">
+          <div class="contact-detail-label">Open to</div>
+          <div class="contact-detail-val">Data Engineer<br><span style="color:rgba(247,245,240,0.5);font-size:11px;">Full-time &middot; Freelance</span></div>
+        </div>
+      </div>
+
+      <!-- Response time -->
+      <div class="contact-detail">
+        <div class="contact-detail-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="contact-detail-text">
+          <div class="contact-detail-label">Response time</div>
+          <div class="contact-detail-val">Within 24 hours</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-text">&copy; 2026 Imen Ayadi &middot; Data Engineer</span>
+    <span class="footer-text">Built with care &middot; Open to opportunities</span>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg class="gauge-svg" viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#0f2244"/>
+        <stop offset="100%" stop-color="#07111f"/>
+      </radialGradient>
+      <radialGradient id="innerGrad" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#152d50"/>
+        <stop offset="100%" stop-color="#0a1828"/>
+      </radialGradient>
+      <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+        <feGaussianBlur stdDeviation="1.5" result="blur"/>
+        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+    <!-- outer shell -->
+    <circle cx="34" cy="34" r="33" fill="url(#bgGrad)" stroke="#112233" stroke-width="1.5"/>
+    <!-- tick marks — dim ring -->
+    <g stroke="#1e4060" stroke-linecap="round">
+      <line x1="34" y1="3.5" x2="34" y2="8"   transform="rotate(0   34 34)" stroke-width="1.8"/>
+      <line x1="34" y1="3.5" x2="34" y2="6.5"  transform="rotate(15  34 34)" stroke-width="1.2"/>
+      <line x1="34" y1="3.5" x2="34" y2="8"    transform="rotate(30  34 34)" stroke-width="1.8"/>
+      <line x1="34" y1="3.5" x2="34" y2="6.5"  transform="rotate(45  34 34)" stroke-width="1.2"/>
+      <line x1="34" y1="3.5" x2="34" y2="8"    transform="rotate(60  34 34)" stroke-width="1.8"/>
+      <line x1="34" y1="3.5" x2="34" y2="6.5"  transform="rotate(75  34 34)" stroke-width="1.2"/>
+      <line x1="34" y1="3.5" x2="34" y2="8"    transform="rotate(90  34 34)" stroke-width="1.8"/>
+      <line x1="34" y1="3.5" x2="34" y2="6.5"  transform="rotate(105 34 34)" stroke-width="1.2"/>
+      <line x1="34" y1="3.5" x2="34" y2="8"    transform="rotate(120 34 34)" stroke-width="1.8"/>
+      <line x1="34" y1="3.5" x2="34" y2="6.5"  transform="rotate(135 34 34)" stroke-width="1.2"/>
+      <line x1="34" y1="3.5" x2="34" y2="8"    transform="rotate(150 34 34)" stroke-width="1.8"/>
+      <line x1="34" y1="3.5" x2="34" y2="6.5"  transform="rotate(165 34 34)" stroke-width="1.2"/>
+      <line x1="34" y1="3.5" x2="34" y2="8"    transform="rotate(180 34 34)" stroke-width="1.8"/>
+      <line x1="34" y1="3.5" x2="34" y2="6.5"  transform="rotate(195 34 34)" stroke-width="1.2"/>
+      <line x1="34" y1="3.5" x2="34" y2="8"    transform="rotate(210 34 34)" stroke-width="1.8"/>
+      <line x1="34" y1="3.5" x2="34" y2="6.5"  transform="rotate(225 34 34)" stroke-width="1.2"/>
+      <line x1="34" y1="3.5" x2="34" y2="8"    transform="rotate(240 34 34)" stroke-width="1.8"/>
+      <line x1="34" y1="3.5" x2="34" y2="6.5"  transform="rotate(255 34 34)" stroke-width="1.2"/>
+      <line x1="34" y1="3.5" x2="34" y2="8"    transform="rotate(270 34 34)" stroke-width="1.8"/>
+      <line x1="34" y1="3.5" x2="34" y2="6.5"  transform="rotate(285 34 34)" stroke-width="1.2"/>
+      <line x1="34" y1="3.5" x2="34" y2="8"    transform="rotate(300 34 34)" stroke-width="1.8"/>
+      <line x1="34" y1="3.5" x2="34" y2="6.5"  transform="rotate(315 34 34)" stroke-width="1.2"/>
+      <line x1="34" y1="3.5" x2="34" y2="8"    transform="rotate(330 34 34)" stroke-width="1.8"/>
+      <line x1="34" y1="3.5" x2="34" y2="6.5"  transform="rotate(345 34 34)" stroke-width="1.2"/>
+    </g>
+    <!-- tick marks — glowing teal (top-left arc, ~200deg) -->
+    <g stroke="#38bdf8" stroke-linecap="round" filter="url(#glow)">
+      <line x1="34" y1="3.5" x2="34" y2="8"   transform="rotate(180 34 34)" stroke-width="1.8"/>
+      <line x1="34" y1="3.5" x2="34" y2="6.5"  transform="rotate(195 34 34)" stroke-width="1.2"/>
+      <line x1="34" y1="3.5" x2="34" y2="8"    transform="rotate(210 34 34)" stroke-width="1.8"/>
+      <line x1="34" y1="3.5" x2="34" y2="6.5"  transform="rotate(225 34 34)" stroke-width="1.2"/>
+      <line x1="34" y1="3.5" x2="34" y2="8"    transform="rotate(240 34 34)" stroke-width="1.8"/>
+      <line x1="34" y1="3.5" x2="34" y2="6.5"  transform="rotate(255 34 34)" stroke-width="1.2"/>
+      <line x1="34" y1="3.5" x2="34" y2="8"    transform="rotate(270 34 34)" stroke-width="1.8"/>
+      <line x1="34" y1="3.5" x2="34" y2="6.5"  transform="rotate(285 34 34)" stroke-width="1.2"/>
+      <line x1="34" y1="3.5" x2="34" y2="8"    transform="rotate(300 34 34)" stroke-width="1.8"/>
+      <line x1="34" y1="3.5" x2="34" y2="6.5"  transform="rotate(315 34 34)" stroke-width="1.2"/>
+      <line x1="34" y1="3.5" x2="34" y2="8"    transform="rotate(330 34 34)" stroke-width="1.8"/>
+      <line x1="34" y1="3.5" x2="34" y2="6.5"  transform="rotate(345 34 34)" stroke-width="1.2"/>
+      <line x1="34" y1="3.5" x2="34" y2="8"    transform="rotate(0   34 34)" stroke-width="2"/>
+    </g>
+    <!-- glowing arc stroke — animated by scroll -->
+    <circle id="gauge-arc" cx="34" cy="34" r="27" fill="none" stroke="#38bdf8" stroke-width="2.2"
+      stroke-linecap="round" opacity="0.85" filter="url(#glow)"
+      stroke-dasharray="169.6" stroke-dashoffset="169.6"
+      transform="rotate(-90 34 34)"/>
+    <!-- inner dark circle -->
+    <circle cx="34" cy="34" r="23" fill="url(#innerGrad)" stroke="#1a3a5c" stroke-width="1.2"/>
+    <circle cx="34" cy="34" r="21" fill="none" stroke="#0d2a45" stroke-width="0.6"/>
+    <!-- rocket -->
+    <g transform="translate(34,36)" filter="url(#glow)">
+      <ellipse cx="0" cy="-5" rx="4.2" ry="7.5" fill="#deeefa" opacity="0.95"/>
+      <path d="M-4.2,-5 Q0,-15 4.2,-5Z" fill="#b8ddf5"/>
+      <path d="M-4.2,1.5 L-7,8 L-2.5,4.5Z" fill="#6db8d8"/>
+      <path d="M4.2,1.5 L7,8 L2.5,4.5Z" fill="#6db8d8"/>
+      <circle cx="0" cy="-6" r="2.2" fill="#38bdf8" opacity="0.9"/>
+      <circle cx="0" cy="-6" r="1" fill="#d0f0ff"/>
+      <ellipse cx="0" cy="4" rx="2.2" ry="3" fill="#38bdf8" opacity="0.6"/>
+      <ellipse cx="0" cy="4.5" rx="1.3" ry="2.2" fill="#7dd3fc" opacity="0.85"/>
+      <ellipse cx="0" cy="5" rx="0.7" ry="1.4" fill="#ffffff" opacity="0.95"/>
+    </g>
+  </svg>
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="assets/main.js" defer></script>
+
+<script>
+function setProjectView(mode) {
+  var slider  = document.querySelector('#projects > div:nth-of-type(2)');
+  var grid    = document.getElementById('projects-grid');
+  var btnS    = document.getElementById('view-slider');
+  var btnG    = document.getElementById('view-grid');
+  var on  = 'background:var(--ink);color:var(--bg);';
+  var off = 'background:none;color:var(--ink2);';
+  if (mode === 'grid') {
+    if (slider) slider.style.display = 'none';
+    if (grid)   { grid.style.display = 'block'; }
+    if (btnS)   btnS.style.cssText += off;
+    if (btnG)   btnG.style.cssText += on;
+  } else {
+    if (slider) slider.style.display = '';
+    if (grid)   grid.style.display   = 'none';
+    if (btnS)   btnS.style.cssText += on;
+    if (btnG)   btnG.style.cssText += off;
+  }
+}
+</script>
+</body>
+</html>
