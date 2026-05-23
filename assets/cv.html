@@ -5,413 +5,499 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Imen Ayadi — CV</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap');
 
-  :root {
-    --teal:   #1a7a64;
-    --ink:    #1a1814;
-    --ink2:   #4a4640;
-    --ink3:   #7a7570;
-    --border: #e0ddd8;
-    --bg:     #faf9f6;
-  }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --dark:   #111a17;
+  --dark2:  #1b2b25;
+  --teal:   #25c49a;
+  --teal2:  #1a7a64;
+  --ink:    #1a1814;
+  --ink2:   #4a4640;
+  --ink3:   #7a7570;
+  --border: #e0ddd8;
+  --bg:     #faf9f6;
+  --sidebar-w: 230px;
+}
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 11px;
-    color: var(--ink);
-    background: #fff;
-    line-height: 1.55;
-  }
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  color: var(--ink);
+  background: #e8e5e0;
+  line-height: 1.55;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
 
-  /* ── PRINT ─────────────────────────────── */
-  @media print {
-    body { font-size: 10.5px; }
-    .page { padding: 18mm 16mm; max-width: 100%; box-shadow: none; }
-    a { color: inherit; text-decoration: none; }
-  }
+@media print {
+  body { background: white; font-size: 10px; }
+  .page { width: 210mm; min-height: 297mm; box-shadow: none; display: flex; flex-direction: row; }
+  a { color: inherit; }
+}
 
-  /* ── LAYOUT ─────────────────────────────── */
-  .page {
-    max-width: 820px;
-    margin: 0 auto;
-    padding: 36px 40px;
-    background: #fff;
-  }
+/* ── PAGE ─────────────────────────── */
+.page {
+  display: flex;
+  flex-direction: row;
+  width: 860px;
+  min-height: 1100px;
+  margin: 32px auto;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+}
 
-  /* ── HEADER ─────────────────────────────── */
-  .header { border-bottom: 1.5px solid var(--ink); padding-bottom: 12px; margin-bottom: 16px; }
-  .header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
-  .header-top h1 { font-family: 'Fraunces', serif; font-size: 30px; font-weight: 300; letter-spacing: -0.5px; line-height: 1; }
-  .header-top .title { font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal); margin-top: 4px; }
-  .header-monogram { width: 44px; height: 44px; border-radius: 50%; background: #f0edea; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 14px; font-weight: 300; color: var(--ink2); flex-shrink: 0; }
-  .header-contact { display: flex; flex-wrap: wrap; align-items: center; gap: 0 18px; }
-  .contact-item { display: flex; align-items: center; gap: 4px; font-size: 10px; color: var(--ink2); text-decoration: none; white-space: nowrap; }
-  .contact-item svg { flex-shrink: 0; opacity: 0.5; }
-  .contact-item:hover { color: var(--teal); }
+/* ── SIDEBAR ─────────────────────── */
+.sidebar {
+  width: var(--sidebar-w);
+  flex-shrink: 0;
+  background: var(--dark);
+  padding: 36px 24px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  color: rgba(247,245,240,0.85);
+}
 
-  /* ── BODY GRID ─────────────────────────── */
-  .body { display: grid; grid-template-columns: 1fr 220px; gap: 28px; }
+/* monogram */
+.monogram {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: var(--teal2);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Fraunces', serif;
+  font-size: 16px; font-weight: 300;
+  color: #fff;
+  margin-bottom: 14px;
+}
 
-  /* ── SECTIONS ─────────────────────────── */
-  .section { margin-bottom: 16px; }
-  .section-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 8.5px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--teal);
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 3px;
-    margin-bottom: 10px;
-  }
+.sb-name {
+  font-family: 'Fraunces', serif;
+  font-size: 20px; font-weight: 300;
+  color: #fff; line-height: 1.15;
+  margin-bottom: 4px;
+}
+.sb-title {
+  font-family: 'DM Mono', monospace;
+  font-size: 8px; letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 20px;
+}
 
-  /* ── PROFILE ─────────────────────────── */
-  .profile { font-size: 10.5px; color: var(--ink2); line-height: 1.65; }
+.sb-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.08);
+  margin: 14px 0;
+}
 
-  /* ── EXPERIENCE ─────────────────────── */
-  .exp-entry { margin-bottom: 11px; }
-  .exp-entry:last-child { margin-bottom: 0; }
-  .exp-header { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
-  .exp-role { font-weight: 500; font-size: 11px; color: var(--ink); }
-  .exp-date { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--ink3); white-space: nowrap; flex-shrink: 0; }
-  .exp-org { font-size: 10px; color: var(--teal); margin-bottom: 4px; }
-  .exp-bullets { list-style: none; padding: 0; }
-  .exp-bullets li { font-size: 10.5px; color: var(--ink2); padding-left: 12px; position: relative; margin-bottom: 2px; line-height: 1.5; }
-  .exp-bullets li::before { content: '–'; position: absolute; left: 0; color: var(--ink3); }
+/* sidebar section label */
+.sb-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 7.5px; letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 9px;
+}
 
-  /* ── PROJECTS ─────────────────────────── */
-  .proj-entry { margin-bottom: 10px; }
-  .proj-header { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin-bottom: 1px; }
-  .proj-title { font-weight: 500; font-size: 11px; }
-  .proj-link { font-family: 'DM Mono', monospace; font-size: 8.5px; color: var(--teal); text-decoration: none; white-space: nowrap; flex-shrink: 0; opacity: 0.8; }
-  .proj-link:hover { opacity: 1; text-decoration: underline; }
-  .proj-meta { font-size: 9.5px; color: var(--ink3); margin-bottom: 2px; }
-  .proj-desc { font-size: 10px; color: var(--ink2); line-height: 1.5; margin-bottom: 2px; }
-  .proj-tags { font-family: 'DM Mono', monospace; font-size: 8.5px; color: var(--teal); }
+/* contact items */
+.sb-contact { display: flex; flex-direction: column; gap: 6px; margin-bottom: 4px; }
+.sb-contact-item {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 9.5px; color: rgba(247,245,240,0.65);
+  text-decoration: none; line-height: 1.3;
+  word-break: break-all;
+}
+.sb-contact-item svg { flex-shrink: 0; opacity: 0.5; }
+.sb-contact-item:hover { color: var(--teal); }
 
-  /* ── RIGHT COLUMN ─────────────────────── */
-  .edu-entry { margin-bottom: 10px; }
-  .edu-degree { font-weight: 500; font-size: 11px; line-height: 1.3; }
-  .edu-school { font-size: 10px; color: var(--ink2); }
-  .edu-year { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--ink3); }
-  .edu-grade { font-size: 9.5px; color: var(--teal); margin-top: 1px; }
+/* skill groups */
+.sb-skill-group { margin-bottom: 10px; }
+.sb-skill-group-label {
+  font-size: 9px; font-weight: 500;
+  color: rgba(247,245,240,0.5);
+  margin-bottom: 5px;
+  letter-spacing: 0.03em;
+}
+.sb-tags { display: flex; flex-wrap: wrap; gap: 3px; }
+.sb-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+  padding: 2px 6px;
+  border: 1px solid rgba(37,196,154,0.3);
+  color: rgba(247,245,240,0.7);
+  border-radius: 1px;
+}
+.sb-tag.hi { border-color: var(--teal); color: var(--teal); }
 
-  /* skills */
-  .skill-group { margin-bottom: 9px; }
-  .skill-group-label { font-size: 9.5px; font-weight: 500; color: var(--ink); margin-bottom: 3px; }
-  .skill-tags { display: flex; flex-wrap: wrap; gap: 3px; }
-  .skill-tag { font-family: 'DM Mono', monospace; font-size: 8.5px; padding: 1px 5px; border: 1px solid var(--border); color: var(--ink2); }
+/* languages */
+.sb-lang-row { display: flex; flex-wrap: wrap; gap: 4px; }
+.sb-lang {
+  font-family: 'DM Mono', monospace;
+  font-size: 8px; padding: 2px 7px;
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(247,245,240,0.6);
+}
+.sb-lang.native { border-color: rgba(37,196,154,0.5); color: var(--teal); }
 
-  /* certs + awards */
-  .cert-item { font-size: 10px; color: var(--ink2); margin-bottom: 3px; padding-left: 10px; position: relative; }
-  .cert-item::before { content: '·'; position: absolute; left: 0; color: var(--teal); }
+/* certs */
+.sb-cert-item {
+  font-size: 9px; color: rgba(247,245,240,0.6);
+  padding-left: 10px; position: relative;
+  margin-bottom: 4px; line-height: 1.4;
+}
+.sb-cert-item::before { content: '·'; position: absolute; left: 0; color: var(--teal); }
+.sb-cert-issuer { font-size: 8px; color: rgba(247,245,240,0.35); }
 
-  .award-item { margin-bottom: 6px; }
-  .award-name { font-weight: 500; font-size: 10.5px; }
-  .award-org { font-size: 9.5px; color: var(--ink3); }
-  .award-desc { font-size: 10px; color: var(--ink2); }
+/* awards */
+.sb-award { margin-bottom: 8px; }
+.sb-award-name { font-size: 9.5px; font-weight: 500; color: rgba(247,245,240,0.8); }
+.sb-award-org { font-size: 8.5px; color: rgba(247,245,240,0.4); }
+.sb-award-desc { font-size: 8.5px; color: rgba(247,245,240,0.55); }
 
-  /* languages */
-  .lang-row { display: flex; flex-wrap: wrap; gap: 4px; }
-  .lang-tag { font-family: 'DM Mono', monospace; font-size: 8.5px; padding: 1px 6px; border: 1px solid var(--border); color: var(--ink2); }
-  .lang-tag.native { border-color: var(--teal); color: var(--teal); }
+/* ── MAIN ─────────────────────────── */
+.main {
+  flex: 1;
+  background: #fff;
+  padding: 36px 32px 36px 30px;
+  overflow: hidden;
+}
+
+/* section */
+.section { margin-bottom: 18px; }
+.section-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 8px; letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--teal2);
+  border-bottom: 1px solid #e8e5e0;
+  padding-bottom: 4px;
+  margin-bottom: 11px;
+}
+
+/* profile */
+.profile-text {
+  font-size: 10.5px; color: var(--ink2);
+  line-height: 1.7;
+  border-left: 2px solid var(--teal);
+  padding-left: 10px;
+}
+
+/* experience */
+.exp-entry { margin-bottom: 12px; }
+.exp-top { display: flex; justify-content: space-between; align-items: baseline; gap: 6px; }
+.exp-role { font-weight: 600; font-size: 11px; color: var(--ink); }
+.exp-date { font-family: 'DM Mono', monospace; font-size: 8.5px; color: var(--ink3); white-space: nowrap; flex-shrink: 0; }
+.exp-org { font-size: 9.5px; color: var(--teal2); font-weight: 500; margin-bottom: 4px; }
+.exp-bullets { list-style: none; }
+.exp-bullets li {
+  font-size: 10px; color: var(--ink2);
+  padding-left: 13px; position: relative;
+  margin-bottom: 2px; line-height: 1.5;
+}
+.exp-bullets li::before { content: '▸'; position: absolute; left: 0; color: var(--teal); font-size: 7px; top: 2px; }
+
+/* projects */
+.proj-entry { margin-bottom: 9px; }
+.proj-top { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.proj-title { font-weight: 600; font-size: 10.5px; color: var(--ink); }
+.proj-link {
+  font-family: 'DM Mono', monospace;
+  font-size: 8px; color: var(--teal2);
+  text-decoration: none; white-space: nowrap; flex-shrink: 0;
+}
+.proj-link:hover { text-decoration: underline; }
+.proj-meta { font-size: 9px; color: var(--ink3); margin-bottom: 2px; }
+.proj-desc { font-size: 9.5px; color: var(--ink2); line-height: 1.5; margin-bottom: 3px; }
+.proj-tags {
+  font-family: 'DM Mono', monospace;
+  font-size: 7.5px; color: var(--teal2);
+  background: #f0f9f6; padding: 2px 6px;
+  display: inline-block;
+}
+
+/* education */
+.edu-entry { margin-bottom: 9px; }
+.edu-degree { font-weight: 600; font-size: 11px; color: var(--ink); }
+.edu-school { font-size: 10px; color: var(--ink2); }
+.edu-year { font-family: 'DM Mono', monospace; font-size: 8.5px; color: var(--ink3); }
+.edu-grade {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 8px; padding: 1px 7px;
+  background: var(--teal2); color: #fff;
+  margin-top: 2px;
+}
 </style>
 </head>
 <body>
 <div class="page">
 
-  <!-- HEADER -->
-  <div class="header">
-    <div class="header-top">
-      <div>
-        <h1>Imen Ayadi</h1>
-        <div class="title">Data Engineer</div>
-      </div>
-      <div class="header-monogram">IA</div>
-    </div>
-    <div class="header-contact">
-      <a class="contact-item" href="mailto:imenayadi86@gmail.com">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+  <!-- ── SIDEBAR ── -->
+  <div class="sidebar">
+
+    <div class="monogram">IA</div>
+    <div class="sb-name">Imen<br>Ayadi</div>
+    <div class="sb-title">Data Engineer</div>
+
+    <div class="sb-label">Contact</div>
+    <div class="sb-contact">
+      <a class="sb-contact-item" href="mailto:imenayadi86@gmail.com">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
         imenayadi86@gmail.com
       </a>
-      <a class="contact-item" href="tel:+21626774432">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 4.06 6.18 2 2 0 0 1 6.07 4h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L10 11.91a16 16 0 0 0 6.07 6.07l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <a class="sb-contact-item" href="tel:+21626774432">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 4.06 6.18 2 2 0 0 1 6.07 4h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L10 11.91a16 16 0 0 0 6.07 6.07l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         +216 26 774 432
       </a>
-      <span class="contact-item">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-8-6.686-8-12a8 8 0 1 1 16 0c0 5.314-8 12-8 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      <span class="sb-contact-item">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-8-6.686-8-12a8 8 0 1 1 16 0c0 5.314-8 12-8 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
         Tunis, Tunisia
       </span>
-      <a class="contact-item" href="https://www.linkedin.com/in/imen-ayadi-29255617a/" target="_blank">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      <a class="sb-contact-item" href="https://www.linkedin.com/in/imen-ayadi-29255617a/" target="_blank">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
         linkedin.com/in/imen-ayadi
       </a>
-      <a class="contact-item" href="https://github.com/imen-ayadi" target="_blank">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+      <a class="sb-contact-item" href="https://github.com/imen-ayadi" target="_blank">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
         github.com/imen-ayadi
       </a>
-      <a class="contact-item" href="https://imen-ayadi.github.io" target="_blank">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      <a class="sb-contact-item" href="https://imen-ayadi.github.io" target="_blank">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         imen-ayadi.github.io
       </a>
     </div>
-  </div>
 
-  <!-- BODY -->
-  <div class="body">
+    <div class="sb-divider"></div>
+    <div class="sb-label">Skills</div>
 
-    <!-- LEFT COLUMN -->
-    <div>
+    <div class="sb-skill-group">
+      <div class="sb-skill-group-label">Data Engineering</div>
+      <div class="sb-tags">
+        <span class="sb-tag hi">PostgreSQL</span>
+        <span class="sb-tag hi">Python</span>
+        <span class="sb-tag hi">ETL / ELT</span>
+        <span class="sb-tag hi">Talend</span>
+        <span class="sb-tag">SQL</span>
+        <span class="sb-tag">dbt</span>
+        <span class="sb-tag">Azure Blob</span>
+        <span class="sb-tag">KoboToolbox API</span>
+      </div>
+    </div>
 
-      <!-- PROFILE -->
-      <div class="section">
-        <div class="section-label">Profile</div>
-        <p class="profile">Data Engineer with 2+ years building humanitarian data infrastructure at IMPACT Initiatives — Python ELT pipelines, PostgreSQL star schemas, and Power BI dashboards used by field teams in Sudan and Libya. MSc in Data Analytics (16.5/20). Finance background and 3 years teaching statistics give a strong analytical foundation. Open to Data Engineer and BI Developer roles, on-site, hybrid, or remote.</p>
+    <div class="sb-skill-group">
+      <div class="sb-skill-group-label">Analytics &amp; Visualisation</div>
+      <div class="sb-tags">
+        <span class="sb-tag hi">Power BI</span>
+        <span class="sb-tag hi">DAX</span>
+        <span class="sb-tag">Tableau</span>
+        <span class="sb-tag">R</span>
+        <span class="sb-tag">Pandas</span>
+        <span class="sb-tag">NumPy</span>
+        <span class="sb-tag">Excel</span>
+      </div>
+    </div>
+
+    <div class="sb-skill-group">
+      <div class="sb-skill-group-label">ML &amp; NLP</div>
+      <div class="sb-tags">
+        <span class="sb-tag hi">RoBERTa</span>
+        <span class="sb-tag hi">BART</span>
+        <span class="sb-tag">DeBERTa</span>
+        <span class="sb-tag">XGBoost</span>
+        <span class="sb-tag">Scikit-learn</span>
+      </div>
+    </div>
+
+    <div class="sb-skill-group">
+      <div class="sb-skill-group-label">Tools</div>
+      <div class="sb-tags">
+        <span class="sb-tag">Git</span>
+        <span class="sb-tag">GitHub</span>
+        <span class="sb-tag">Jira</span>
+        <span class="sb-tag">Linux</span>
+        <span class="sb-tag">SSMS</span>
+        <span class="sb-tag">DBeaver</span>
+        <span class="sb-tag">Jupyter</span>
+      </div>
+    </div>
+
+    <div class="sb-divider"></div>
+    <div class="sb-label">Languages</div>
+    <div class="sb-lang-row" style="margin-bottom:14px;">
+      <span class="sb-lang native">Arabic</span>
+      <span class="sb-lang native">French</span>
+      <span class="sb-lang">English</span>
+      <span class="sb-lang">German A1</span>
+    </div>
+
+    <div class="sb-divider"></div>
+    <div class="sb-label">Certifications</div>
+    <div style="margin-bottom:14px;">
+      <div class="sb-cert-item">Building Generative AI Apps with Gradio<div class="sb-cert-issuer">DeepLearning.AI</div></div>
+      <div class="sb-cert-item">Open Source Models with Hugging Face<div class="sb-cert-issuer">DeepLearning.AI</div></div>
+      <div class="sb-cert-item">Prompt Engineering with Llama 2 &amp; 3<div class="sb-cert-issuer">DeepLearning.AI</div></div>
+      <div class="sb-cert-item">Introduction to Power BI<div class="sb-cert-issuer">DataCamp · Nov 2023</div></div>
+      <div class="sb-cert-item">Deutsch A1 GER<div class="sb-cert-issuer">Boosteno Sprachzentrum</div></div>
+    </div>
+
+    <div class="sb-divider"></div>
+    <div class="sb-label">Awards</div>
+    <div class="sb-award">
+      <div class="sb-award-name">Bal de Projet — 1st Place</div>
+      <div class="sb-award-org">ESPRIT · 2023</div>
+      <div class="sb-award-desc">Power BI + XGBoost sales analysis</div>
+    </div>
+    <div class="sb-award">
+      <div class="sb-award-name">Business Game — 1st Prize</div>
+      <div class="sb-award-org">SMU · 2021</div>
+      <div class="sb-award-desc">Sales strategy &amp; cost optimisation</div>
+    </div>
+
+  </div><!-- /sidebar -->
+
+  <!-- ── MAIN ── -->
+  <div class="main">
+
+    <!-- PROFILE -->
+    <div class="section">
+      <div class="section-label">Profile</div>
+      <p class="profile-text">Data Engineer with 2+ years building humanitarian data infrastructure at IMPACT Initiatives — Python ELT pipelines, PostgreSQL star schemas, and Power BI dashboards used by field teams in Sudan and Libya. MSc in Data Analytics (16.5 / 20). Finance background and 3 years teaching statistics give a strong analytical foundation. Open to Data Engineer and BI Developer roles.</p>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="section">
+      <div class="section-label">Experience</div>
+
+      <div class="exp-entry">
+        <div class="exp-top">
+          <div class="exp-role">Data Engineer — Sudan Mission</div>
+          <div class="exp-date">Jun 2024 – Present</div>
+        </div>
+        <div class="exp-org">IMPACT Initiatives · Nairobi, Kenya</div>
+        <ul class="exp-bullets">
+          <li>Designed and built a PostgreSQL star schema consolidating 10+ humanitarian data sources</li>
+          <li>Developed Python ELT pipelines ingesting field data from KoboToolbox API, with spatial joins, schema validation, and automated transformation</li>
+          <li>Built a 4-tier location matching system achieving 100% geographic coverage across Sudan</li>
+          <li>Created 10+ fact &amp; dimension views supporting 26+ months of time-series field data</li>
+          <li>Delivered Power BI dashboard used by humanitarian teams to track displacement and service gaps across 55 admin clusters</li>
+        </ul>
       </div>
 
-      <!-- EXPERIENCE -->
-      <div class="section">
-        <div class="section-label">Experience</div>
-
-        <div class="exp-entry">
-          <div class="exp-header">
-            <div class="exp-role">Data Engineer — Sudan Mission</div>
-            <div class="exp-date">Jun 2024 – Present</div>
-          </div>
-          <div class="exp-org">IMPACT Initiatives · Nairobi, Kenya</div>
-          <ul class="exp-bullets">
-            <li>Designed and built a PostgreSQL star schema consolidating 10+ humanitarian data sources</li>
-            <li>Developed Python ELT pipelines ingesting field data from KoboToolbox API, with spatial joins, schema validation, and automated transformation</li>
-            <li>Built a 4-tier location matching system achieving 100% geographic coverage across Sudan</li>
-            <li>Created 10+ fact &amp; dimension views supporting 26+ months of time-series field data</li>
-            <li>Delivered Power BI dashboard used by humanitarian teams to track displacement and service gaps across 55 admin clusters</li>
-          </ul>
+      <div class="exp-entry">
+        <div class="exp-top">
+          <div class="exp-role">Data Officer — Libya Mission</div>
+          <div class="exp-date">Feb – Jun 2024</div>
         </div>
-
-        <div class="exp-entry">
-          <div class="exp-header">
-            <div class="exp-role">Data Officer — Libya Mission</div>
-            <div class="exp-date">Feb – Jun 2024</div>
-          </div>
-          <div class="exp-org">IMPACT Initiatives · Tunis, Tunisia</div>
-          <ul class="exp-bullets">
-            <li>Processed and cleaned 5,000+ survey responses via KoboToolbox across 3 assessment rounds</li>
-            <li>Built Power BI dashboards tracking displacement, food security, and healthcare access across 8 governorates</li>
-            <li>Ran vulnerability and trend analysis in R and Python, outputs feeding directly into IMPACT situation reports</li>
-            <li>Trained 5+ partner organisations on KoboToolbox and data quality best practices</li>
-          </ul>
-        </div>
-
-        <div class="exp-entry">
-          <div class="exp-header">
-            <div class="exp-role">Data Scientist Intern</div>
-            <div class="exp-date">Feb – Jun 2024</div>
-          </div>
-          <div class="exp-org">VERMEG for Banking &amp; Insurance Software · Tunis, Tunisia</div>
-          <ul class="exp-bullets">
-            <li>Automated email classification using RoBERTa and DeBERTa achieving 92% accuracy</li>
-            <li>Built BART summarisation pipeline cutting manual email review time for compliance teams</li>
-            <li>Built sentiment classifier to triage inbound tickets by urgency, reducing time-to-first-response on critical issues</li>
-          </ul>
-        </div>
-
-        <div class="exp-entry">
-          <div class="exp-header">
-            <div class="exp-role">BI Analyst Intern</div>
-            <div class="exp-date">Jul – Aug 2023</div>
-          </div>
-          <div class="exp-org">Wimbee · Tunis, Tunisia</div>
-          <ul class="exp-bullets">
-            <li>Built Power BI dashboard giving the sales team real-time pipeline visibility, replacing manual weekly reports (15% efficiency gain)</li>
-            <li>Rebuilt Talend ETL pipeline integrating CRM and transaction data into the reporting layer, eliminating manual data exports</li>
-          </ul>
-        </div>
-
-        <div class="exp-entry">
-          <div class="exp-header">
-            <div class="exp-role">Statistics &amp; Mathematics Assistant</div>
-            <div class="exp-date">2018 – 2021</div>
-          </div>
-          <div class="exp-org">Mediterranean School of Business · Tunis, Tunisia</div>
-          <ul class="exp-bullets">
-            <li>Delivered statistics and mathematics courses to undergraduate students over 3 academic years</li>
-          </ul>
-        </div>
-
+        <div class="exp-org">IMPACT Initiatives · Tunis, Tunisia</div>
+        <ul class="exp-bullets">
+          <li>Processed and cleaned 5,000+ survey responses via KoboToolbox across 3 assessment rounds</li>
+          <li>Built Power BI dashboards tracking displacement, food security, and healthcare access across 8 governorates</li>
+          <li>Ran vulnerability and trend analysis in R and Python, outputs feeding directly into IMPACT situation reports</li>
+          <li>Trained 5+ partner organisations on KoboToolbox and data quality best practices</li>
+        </ul>
       </div>
 
-      <!-- PROJECTS -->
-      <div class="section">
-        <div class="section-label">Projects</div>
-
-        <div class="proj-entry">
-          <div class="proj-header">
-            <div class="proj-title">Sudan Humanitarian Data Infrastructure</div>
-            <a class="proj-link" href="https://www.impact-initiatives.org" target="_blank">&#8599; IMPACT Initiatives</a>
-          </div>
-          <div class="proj-meta">IMPACT Initiatives · 2024 – Present</div>
-          <div class="proj-desc">KoboToolbox API → Python ELT → PostgreSQL star schema. 10+ data sources, Azure Blob Storage archiving, Power BI choropleth across 55 admin clusters and 26+ months of field data.</div>
-          <div class="proj-tags">Python · PostgreSQL · Azure Blob Storage · KoboToolbox API · Power BI · DAX</div>
+      <div class="exp-entry">
+        <div class="exp-top">
+          <div class="exp-role">Data Scientist Intern</div>
+          <div class="exp-date">Feb – Jun 2024</div>
         </div>
-
-        <div class="proj-entry">
-          <div class="proj-header">
-            <div class="proj-title">Smart Box — AI Email Management System</div>
-            <a class="proj-link" href="https://github.com/imen-ayadi/Smart-Box" target="_blank">&#8599; GitHub</a>
-          </div>
-          <div class="proj-meta">MSc Capstone · 2024</div>
-          <div class="proj-desc">Multi-model NLP pipeline automating email triage: classification (RoBERTa), sentiment (BERT), NER (spaCy), summarisation (BART), response generation (LLaMA-2). Deployed on HuggingFace Spaces with Docker.</div>
-          <div class="proj-tags">Python · Transformers · RoBERTa · BERT · LLaMA-2 · Docker · HuggingFace</div>
-        </div>
-
-        <div class="proj-entry">
-          <div class="proj-header">
-            <div class="proj-title">Olist Sales Analysis <span style="color:var(--teal);font-weight:400;">· Award Winner</span></div>
-            <a class="proj-link" href="https://github.com/imen-ayadi/Olist" target="_blank">&#8599; GitHub</a>
-          </div>
-          <div class="proj-meta">ESPRIT · 2023</div>
-          <div class="proj-desc">End-to-end analytics on 99K+ e-commerce orders: Talend ETL, star schema data warehouse, XGBoost customer satisfaction prediction (88.4% accuracy).</div>
-          <div class="proj-tags">Talend · Power BI · XGBoost · Python · Star Schema</div>
-        </div>
-
-        <div class="proj-entry">
-          <div class="proj-header">
-            <div class="proj-title">National Health Analysis</div>
-            <a class="proj-link" href="https://github.com/imen-ayadi/-National-Health-Analysis-Power-BI-Dashboard" target="_blank">&#8599; GitHub</a>
-          </div>
-          <div class="proj-meta">2024</div>
-          <div class="proj-desc">Healthcare dashboard across 55,500 patient records from 10 hospitals — demographics, admissions, billing, and treatment outcomes.</div>
-          <div class="proj-tags">Power BI · DAX · Power Query · Excel</div>
-        </div>
-
+        <div class="exp-org">VERMEG for Banking &amp; Insurance Software · Tunis, Tunisia</div>
+        <ul class="exp-bullets">
+          <li>Automated email classification using RoBERTa and DeBERTa achieving 92% accuracy</li>
+          <li>Built BART summarisation pipeline cutting manual email review time for compliance teams</li>
+          <li>Built sentiment classifier to triage inbound tickets by urgency, reducing time-to-first-response on critical issues</li>
+        </ul>
       </div>
 
-    </div><!-- /left -->
-
-    <!-- RIGHT COLUMN -->
-    <div>
-
-      <!-- EDUCATION -->
-      <div class="section">
-        <div class="section-label">Education</div>
-
-        <div class="edu-entry">
-          <div class="edu-degree">MSc Data Analytics</div>
-          <div class="edu-school">ESB – Esprit School of Business</div>
-          <div class="edu-year">2022 – 2024</div>
-          <div class="edu-grade">16.5 / 20</div>
+      <div class="exp-entry">
+        <div class="exp-top">
+          <div class="exp-role">BI Analyst Intern</div>
+          <div class="exp-date">Jul – Aug 2023</div>
         </div>
-
-        <div class="edu-entry">
-          <div class="edu-degree">BSc Business Management <em>(Finance)</em></div>
-          <div class="edu-school">MSB – Mediterranean School of Business</div>
-          <div class="edu-year">2018 – 2021</div>
-          <div class="edu-grade">GPA 3.16 / 4</div>
-        </div>
-
+        <div class="exp-org">Wimbee · Tunis, Tunisia</div>
+        <ul class="exp-bullets">
+          <li>Built Power BI dashboard giving the sales team real-time pipeline visibility, replacing manual weekly reports (15% efficiency gain)</li>
+          <li>Rebuilt Talend ETL pipeline integrating CRM and transaction data into the reporting layer, eliminating manual data exports</li>
+        </ul>
       </div>
 
-      <!-- SKILLS -->
-      <div class="section">
-        <div class="section-label">Skills</div>
-
-        <div class="skill-group">
-          <div class="skill-group-label">Data Engineering</div>
-          <div class="skill-tags">
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">SQL</span>
-            <span class="skill-tag">ETL / ELT</span>
-            <span class="skill-tag">Talend</span>
-            <span class="skill-tag">dbt</span>
-            <span class="skill-tag">Azure Blob Storage</span>
-            <span class="skill-tag">KoboToolbox API</span>
-          </div>
+      <div class="exp-entry">
+        <div class="exp-top">
+          <div class="exp-role">Statistics &amp; Mathematics Assistant</div>
+          <div class="exp-date">2018 – 2021</div>
         </div>
+        <div class="exp-org">Mediterranean School of Business · Tunis, Tunisia</div>
+        <ul class="exp-bullets">
+          <li>Delivered statistics and mathematics courses to undergraduate students over 3 academic years</li>
+        </ul>
+      </div>
+    </div>
 
-        <div class="skill-group">
-          <div class="skill-group-label">Analytics &amp; Visualisation</div>
-          <div class="skill-tags">
-            <span class="skill-tag">Power BI</span>
-            <span class="skill-tag">DAX</span>
-            <span class="skill-tag">Tableau</span>
-            <span class="skill-tag">R</span>
-            <span class="skill-tag">Pandas</span>
-            <span class="skill-tag">NumPy</span>
-            <span class="skill-tag">Excel</span>
-          </div>
+    <!-- PROJECTS -->
+    <div class="section">
+      <div class="section-label">Projects</div>
+
+      <div class="proj-entry">
+        <div class="proj-top">
+          <div class="proj-title">Sudan Humanitarian Data Infrastructure</div>
+          <a class="proj-link" href="https://www.impact-initiatives.org" target="_blank">↗ IMPACT Initiatives</a>
         </div>
-
-        <div class="skill-group">
-          <div class="skill-group-label">ML &amp; NLP</div>
-          <div class="skill-tags">
-            <span class="skill-tag">RoBERTa</span>
-            <span class="skill-tag">DeBERTa</span>
-            <span class="skill-tag">BART</span>
-            <span class="skill-tag">XGBoost</span>
-            <span class="skill-tag">Scikit-learn</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <div class="skill-group-label">Tools &amp; Workflow</div>
-          <div class="skill-tags">
-            <span class="skill-tag">Git</span>
-            <span class="skill-tag">GitHub</span>
-            <span class="skill-tag">Jira</span>
-            <span class="skill-tag">VS Code</span>
-            <span class="skill-tag">Linux</span>
-            <span class="skill-tag">SSMS</span>
-            <span class="skill-tag">DBeaver</span>
-            <span class="skill-tag">Jupyter</span>
-          </div>
-        </div>
-
+        <div class="proj-meta">IMPACT Initiatives · 2024 – Present</div>
+        <div class="proj-desc">KoboToolbox API → Python ELT → PostgreSQL star schema. 10+ data sources, Azure Blob Storage archiving, Power BI choropleth across 55 admin clusters and 26+ months of field data.</div>
+        <div class="proj-tags">Python · PostgreSQL · Azure Blob Storage · KoboToolbox API · Power BI · DAX</div>
       </div>
 
-      <!-- CERTIFICATIONS -->
-      <div class="section">
-        <div class="section-label">Certifications</div>
-        <div class="cert-item">Building Generative AI Apps with Gradio <span style="color:var(--teal)">· DeepLearning.AI</span></div>
-        <div class="cert-item">Open Source Models with Hugging Face <span style="color:var(--teal)">· DeepLearning.AI</span></div>
-        <div class="cert-item">Prompt Engineering with Llama 2 &amp; 3 <span style="color:var(--teal)">· DeepLearning.AI</span></div>
-        <div class="cert-item">Introduction to Power BI <span style="color:var(--teal)">· DataCamp</span></div>
-        <div class="cert-item">Deutsch A1 GER <span style="color:var(--teal)">· Boosteno Sprachzentrum</span></div>
+      <div class="proj-entry">
+        <div class="proj-top">
+          <div class="proj-title">Smart Box — AI Email Management System</div>
+          <a class="proj-link" href="https://github.com/imen-ayadi/Smart-Box" target="_blank">↗ GitHub</a>
+        </div>
+        <div class="proj-meta">MSc Capstone · 2024</div>
+        <div class="proj-desc">Multi-model NLP pipeline: classification (RoBERTa), sentiment (BERT), NER (spaCy), summarisation (BART), response generation (LLaMA-2). Deployed on HuggingFace Spaces with Docker.</div>
+        <div class="proj-tags">Python · Transformers · RoBERTa · BERT · LLaMA-2 · Docker · HuggingFace</div>
       </div>
 
-      <!-- AWARDS -->
-      <div class="section">
-        <div class="section-label">Awards</div>
-        <div class="award-item">
-          <div class="award-name">Bal de Projet — 1st Place</div>
-          <div class="award-org">ESPRIT · 2023</div>
-          <div class="award-desc">Sales analysis with Power BI &amp; XGBoost prediction model</div>
+      <div class="proj-entry">
+        <div class="proj-top">
+          <div class="proj-title">Olist Sales Analysis &nbsp;<span style="color:var(--teal2);font-size:9px;font-weight:400;">Award Winner</span></div>
+          <a class="proj-link" href="https://github.com/imen-ayadi/Olist" target="_blank">↗ GitHub</a>
         </div>
-        <div class="award-item">
-          <div class="award-name">Business Game — 1st Prize</div>
-          <div class="award-org">SMU · 2021</div>
-          <div class="award-desc">Sales strategy &amp; cost optimisation</div>
-        </div>
+        <div class="proj-meta">ESPRIT · 2023</div>
+        <div class="proj-desc">End-to-end analytics on 99K+ e-commerce orders: Talend ETL, star schema data warehouse, XGBoost customer satisfaction prediction (88.4% accuracy).</div>
+        <div class="proj-tags">Talend · Power BI · XGBoost · Python · Star Schema</div>
       </div>
 
-      <!-- LANGUAGES -->
-      <div class="section">
-        <div class="section-label">Languages</div>
-        <div class="lang-row">
-          <span class="lang-tag native">Arabic</span>
-          <span class="lang-tag native">French</span>
-          <span class="lang-tag">English</span>
-          <span class="lang-tag">German A1</span>
+      <div class="proj-entry">
+        <div class="proj-top">
+          <div class="proj-title">National Health Analysis</div>
+          <a class="proj-link" href="https://github.com/imen-ayadi/-National-Health-Analysis-Power-BI-Dashboard" target="_blank">↗ GitHub</a>
         </div>
+        <div class="proj-meta">2024</div>
+        <div class="proj-desc">Healthcare dashboard across 55,500 patient records from 10 hospitals — demographics, admissions, billing, and treatment outcomes.</div>
+        <div class="proj-tags">Power BI · DAX · Power Query · Excel</div>
       </div>
+    </div>
 
-    </div><!-- /right -->
+    <!-- EDUCATION -->
+    <div class="section">
+      <div class="section-label">Education</div>
+      <div class="edu-entry">
+        <div class="edu-degree">MSc Data Analytics</div>
+        <div class="edu-school">ESB – Esprit School of Business</div>
+        <div class="edu-year">2022 – 2024 &nbsp;·&nbsp; <span class="edu-grade">16.5 / 20</span></div>
+      </div>
+      <div class="edu-entry">
+        <div class="edu-degree">BSc Business Management <em>(Finance)</em></div>
+        <div class="edu-school">MSB – Mediterranean School of Business</div>
+        <div class="edu-year">2018 – 2021 &nbsp;·&nbsp; <span class="edu-grade">GPA 3.16 / 4</span></div>
+      </div>
+    </div>
 
-  </div><!-- /body -->
+  </div><!-- /main -->
 
-</div>
+</div><!-- /page -->
 </body>
 </html>
