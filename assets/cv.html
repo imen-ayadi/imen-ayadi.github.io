@@ -36,6 +36,8 @@ body {
   body { background: white; font-size: 10px; }
   .page { width: 210mm; min-height: 297mm; box-shadow: none; display: flex; flex-direction: row; }
   a { color: inherit; }
+  * { animation: none !important; transition: none !important; opacity: 1 !important; transform: none !important; }
+  .profile-text { border-left: 2px solid var(--teal) !important; background-image: none !important; padding-left: 10px !important; }
 }
 
 /* ── PAGE ─────────────────────────── */
@@ -227,6 +229,104 @@ body {
   font-size: 8px; padding: 1px 7px;
   background: var(--teal2); color: #fff;
   margin-top: 2px;
+}
+
+/* ── ANIMATIONS ──────────────────────────────────────────── */
+@media (prefers-reduced-motion: no-preference) {
+
+  /* Keyframes */
+  @keyframes slideInLeft {
+    from { transform: translateX(-30px); opacity: 0; }
+    to   { transform: none; opacity: 1; }
+  }
+  @keyframes fadeInRight {
+    from { transform: translateX(20px); opacity: 0; }
+    to   { transform: none; opacity: 1; }
+  }
+  @keyframes fadeUp {
+    from { transform: translateY(10px); opacity: 0; }
+    to   { transform: none; opacity: 1; }
+  }
+  @keyframes popIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+  }
+  @keyframes drawLine {
+    from { background-size: 2px 0%; }
+    to   { background-size: 2px 100%; }
+  }
+
+  /* Page load — sidebar from left, main from right */
+  .sidebar { animation: slideInLeft 0.55s cubic-bezier(0.22,1,0.36,1) both; }
+  .main    { animation: fadeInRight 0.55s cubic-bezier(0.22,1,0.36,1) 0.1s both; }
+
+  /* Section reveals — staggered fade-up */
+  .section { opacity: 0; animation: fadeUp 0.45s ease both; }
+  .section:nth-child(1) { animation-delay: 0.25s; }
+  .section:nth-child(2) { animation-delay: 0.40s; }
+  .section:nth-child(3) { animation-delay: 0.55s; }
+  .section:nth-child(4) { animation-delay: 0.70s; }
+
+  /* Experience entries — section-label is nth-child(1), entries start at 2 */
+  .exp-entry { opacity: 0; animation: fadeUp 0.35s ease both; }
+  .exp-entry:nth-child(2) { animation-delay: 0.50s; }
+  .exp-entry:nth-child(3) { animation-delay: 0.65s; }
+  .exp-entry:nth-child(4) { animation-delay: 0.80s; }
+  .exp-entry:nth-child(5) { animation-delay: 0.95s; }
+
+  /* Project entries */
+  .proj-entry { opacity: 0; animation: fadeUp 0.35s ease both; }
+  .proj-entry:nth-child(2) { animation-delay: 0.65s; }
+  .proj-entry:nth-child(3) { animation-delay: 0.80s; }
+  .proj-entry:nth-child(4) { animation-delay: 0.95s; }
+  .proj-entry:nth-child(5) { animation-delay: 1.10s; }
+
+  /* Skill tags — pop in staggered */
+  .sb-tag { opacity: 0; animation: popIn 0.2s ease both; }
+  .sb-tags .sb-tag:nth-child(1) { animation-delay: 0.45s; }
+  .sb-tags .sb-tag:nth-child(2) { animation-delay: 0.52s; }
+  .sb-tags .sb-tag:nth-child(3) { animation-delay: 0.59s; }
+  .sb-tags .sb-tag:nth-child(4) { animation-delay: 0.66s; }
+  .sb-tags .sb-tag:nth-child(5) { animation-delay: 0.73s; }
+  .sb-tags .sb-tag:nth-child(6) { animation-delay: 0.80s; }
+  .sb-tags .sb-tag:nth-child(7) { animation-delay: 0.87s; }
+  .sb-tags .sb-tag:nth-child(8) { animation-delay: 0.94s; }
+
+  /* Profile accent line — draws itself downward */
+  .profile-text {
+    border-left: none;
+    background-image: linear-gradient(var(--teal), var(--teal));
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 2px 0%;
+    animation: drawLine 0.8s 0.35s ease forwards;
+  }
+
+  /* Hover: skill tags — soft teal glow */
+  .sb-tag {
+    transition: border-color 0.2s, color 0.2s, box-shadow 0.2s;
+  }
+  .sb-tag:hover {
+    border-color: rgba(37,196,154,0.7);
+    color: var(--teal);
+    box-shadow: 0 0 8px rgba(37,196,154,0.18);
+  }
+
+  /* Hover: experience bullets — slight left-indent */
+  .exp-bullets li { transition: padding-left 0.18s ease; }
+  .exp-bullets li:hover { padding-left: 18px; }
+
+  /* Hover: project title — underline draws in */
+  .proj-title {
+    background-image: linear-gradient(var(--ink), var(--ink));
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 0% 1px;
+    transition: background-size 0.25s ease;
+    padding-bottom: 1px;
+  }
+  .proj-entry:hover .proj-title { background-size: 100% 1px; }
+
 }
 </style>
 </head>
