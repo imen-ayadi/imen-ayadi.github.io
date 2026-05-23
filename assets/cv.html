@@ -238,6 +238,32 @@ body {
   overflow: hidden;
 }
 
+/* ── PRINT BUTTON ────────────────── */
+.cv-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  width: 860px;
+  margin: 0 auto 10px;
+}
+.cv-print-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--teal2);
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+  text-decoration: none;
+}
+.cv-print-btn:hover { background: #15604e; }
+@media print { .cv-toolbar { display: none; } }
+
 /* section */
 .section { margin-bottom: 18px; }
 .section-label {
@@ -404,6 +430,16 @@ body {
 </style>
 </head>
 <body>
+
+<div class="cv-toolbar">
+  <button class="cv-print-btn" onclick="window.print()">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/>
+    </svg>
+    Save as PDF
+  </button>
+</div>
+
 <div class="page">
 
   <!-- ── SIDEBAR ── -->
