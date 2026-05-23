@@ -648,6 +648,23 @@ a.cert-card-link:hover .cert-arrow,
   padding: 3px 10px;
   border: 1px solid var(--border);
 }
+.edu-pivot-note {
+  max-width: 1100px;
+  margin: 0 auto 2.5rem;
+  padding: 0 2.5rem;
+  font-size: 13px;
+  color: var(--ink2);
+  line-height: 1.75;
+  font-style: italic;
+  border-left: 3px solid var(--border);
+  padding-left: 1.25rem;
+}
+.edu-location {
+  font-size: 10px;
+  color: var(--ink3);
+  margin-top: 3px;
+  letter-spacing: 0.04em;
+}
 .edu-capstone {
   margin-top: 1.5rem;
   padding: 1.25rem 1.5rem;
