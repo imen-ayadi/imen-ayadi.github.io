@@ -83,8 +83,11 @@
   .exp-bullets li::before { content: '–'; position: absolute; left: 0; color: var(--ink3); }
 
   /* ── PROJECTS ─────────────────────────── */
-  .proj-entry { margin-bottom: 9px; }
+  .proj-entry { margin-bottom: 10px; }
+  .proj-header { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin-bottom: 1px; }
   .proj-title { font-weight: 500; font-size: 11px; }
+  .proj-link { font-family: 'DM Mono', monospace; font-size: 8.5px; color: var(--teal); text-decoration: none; white-space: nowrap; flex-shrink: 0; opacity: 0.8; }
+  .proj-link:hover { opacity: 1; text-decoration: underline; }
   .proj-meta { font-size: 9.5px; color: var(--ink3); margin-bottom: 2px; }
   .proj-desc { font-size: 10px; color: var(--ink2); line-height: 1.5; margin-bottom: 2px; }
   .proj-tags { font-family: 'DM Mono', monospace; font-size: 8.5px; color: var(--teal); }
@@ -245,28 +248,40 @@
         <div class="section-label">Projects</div>
 
         <div class="proj-entry">
-          <div class="proj-title">Sudan Humanitarian Data Infrastructure</div>
+          <div class="proj-header">
+            <div class="proj-title">Sudan Humanitarian Data Infrastructure</div>
+            <a class="proj-link" href="https://www.impact-initiatives.org" target="_blank">&#8599; IMPACT Initiatives</a>
+          </div>
           <div class="proj-meta">IMPACT Initiatives · 2024 – Present</div>
           <div class="proj-desc">KoboToolbox API → Python ELT → PostgreSQL star schema. 10+ data sources, Azure Blob Storage archiving, Power BI choropleth across 55 admin clusters and 26+ months of field data.</div>
           <div class="proj-tags">Python · PostgreSQL · Azure Blob Storage · KoboToolbox API · Power BI · DAX</div>
         </div>
 
         <div class="proj-entry">
-          <div class="proj-title">Smart Box — AI Email Management System</div>
+          <div class="proj-header">
+            <div class="proj-title">Smart Box — AI Email Management System</div>
+            <a class="proj-link" href="https://github.com/imen-ayadi/Smart-Box" target="_blank">&#8599; GitHub</a>
+          </div>
           <div class="proj-meta">MSc Capstone · 2024</div>
           <div class="proj-desc">Multi-model NLP pipeline automating email triage: classification (RoBERTa), sentiment (BERT), NER (spaCy), summarisation (BART), response generation (LLaMA-2). Deployed on HuggingFace Spaces with Docker.</div>
           <div class="proj-tags">Python · Transformers · RoBERTa · BERT · LLaMA-2 · Docker · HuggingFace</div>
         </div>
 
         <div class="proj-entry">
-          <div class="proj-title">Olist Sales Analysis <span style="color:var(--teal);font-weight:400;">· Award Winner</span></div>
+          <div class="proj-header">
+            <div class="proj-title">Olist Sales Analysis <span style="color:var(--teal);font-weight:400;">· Award Winner</span></div>
+            <a class="proj-link" href="https://github.com/imen-ayadi/Olist" target="_blank">&#8599; GitHub</a>
+          </div>
           <div class="proj-meta">ESPRIT · 2023</div>
           <div class="proj-desc">End-to-end analytics on 99K+ e-commerce orders: Talend ETL, star schema data warehouse, XGBoost customer satisfaction prediction (88.4% accuracy).</div>
           <div class="proj-tags">Talend · Power BI · XGBoost · Python · Star Schema</div>
         </div>
 
         <div class="proj-entry">
-          <div class="proj-title">National Health Analysis</div>
+          <div class="proj-header">
+            <div class="proj-title">National Health Analysis</div>
+            <a class="proj-link" href="https://github.com/imen-ayadi/-National-Health-Analysis-Power-BI-Dashboard" target="_blank">&#8599; GitHub</a>
+          </div>
           <div class="proj-meta">2024</div>
           <div class="proj-desc">Healthcare dashboard across 55,500 patient records from 10 hospitals — demographics, admissions, billing, and treatment outcomes.</div>
           <div class="proj-tags">Power BI · DAX · Power Query · Excel</div>
