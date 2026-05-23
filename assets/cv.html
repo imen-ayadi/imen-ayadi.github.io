@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Imen Ayadi — CV</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap');
+
+  :root {
+    --teal:   #1a7a64;
+    --ink:    #1a1814;
+    --ink2:   #4a4640;
+    --ink3:   #7a7570;
+    --border: #e0ddd8;
+    --bg:     #faf9f6;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    color: var(--ink);
+    background: #fff;
+    line-height: 1.55;
+  }
+
+  /* ── PRINT ─────────────────────────────── */
+  @media print {
+    body { font-size: 10.5px; }
+    .page { padding: 18mm 16mm; max-width: 100%; box-shadow: none; }
+    a { color: inherit; text-decoration: none; }
+  }
+
+  /* ── LAYOUT ─────────────────────────────── */
+  .page {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 36px 40px;
+    background: #fff;
+  }
+
+  /* ── HEADER ─────────────────────────────── */
+  .header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; border-bottom: 1.5px solid var(--ink); padding-bottom: 14px; margin-bottom: 16px; }
+  .header-left h1 { font-family: 'Fraunces', serif; font-size: 28px; font-weight: 300; letter-spacing: -0.5px; line-height: 1; margin-bottom: 3px; }
+  .header-left .title { font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); }
+  .header-right { text-align: right; font-size: 10px; color: var(--ink2); line-height: 1.7; }
+  .header-right a { color: var(--ink2); text-decoration: none; }
+  .header-right a:hover { color: var(--teal); }
+
+  /* ── BODY GRID ─────────────────────────── */
+  .body { display: grid; grid-template-columns: 1fr 220px; gap: 28px; }
+
+  /* ── SECTIONS ─────────────────────────── */
+  .section { margin-bottom: 16px; }
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--teal);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 3px;
+    margin-bottom: 10px;
+  }
+
+  /* ── PROFILE ─────────────────────────── */
+  .profile { font-size: 10.5px; color: var(--ink2); line-height: 1.65; }
+
+  /* ── EXPERIENCE ─────────────────────── */
+  .exp-entry { margin-bottom: 11px; }
+  .exp-entry:last-child { margin-bottom: 0; }
+  .exp-header { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  .exp-role { font-weight: 500; font-size: 11px; color: var(--ink); }
+  .exp-date { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--ink3); white-space: nowrap; flex-shrink: 0; }
+  .exp-org { font-size: 10px; color: var(--teal); margin-bottom: 4px; }
+  .exp-bullets { list-style: none; padding: 0; }
+  .exp-bullets li { font-size: 10.5px; color: var(--ink2); padding-left: 12px; position: relative; margin-bottom: 2px; line-height: 1.5; }
+  .exp-bullets li::before { content: '–'; position: absolute; left: 0; color: var(--ink3); }
+
+  /* ── PROJECTS ─────────────────────────── */
+  .proj-entry { margin-bottom: 9px; }
+  .proj-title { font-weight: 500; font-size: 11px; }
+  .proj-meta { font-size: 9.5px; color: var(--ink3); margin-bottom: 2px; }
+  .proj-desc { font-size: 10px; color: var(--ink2); line-height: 1.5; margin-bottom: 2px; }
+  .proj-tags { font-family: 'DM Mono', monospace; font-size: 8.5px; color: var(--teal); }
+
+  /* ── RIGHT COLUMN ─────────────────────── */
+  .edu-entry { margin-bottom: 10px; }
+  .edu-degree { font-weight: 500; font-size: 11px; line-height: 1.3; }
+  .edu-school { font-size: 10px; color: var(--ink2); }
+  .edu-year { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--ink3); }
+  .edu-grade { font-size: 9.5px; color: var(--teal); margin-top: 1px; }
+
+  /* skills */
+  .skill-group { margin-bottom: 9px; }
+  .skill-group-label { font-size: 9.5px; font-weight: 500; color: var(--ink); margin-bottom: 3px; }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 3px; }
+  .skill-tag { font-family: 'DM Mono', monospace; font-size: 8.5px; padding: 1px 5px; border: 1px solid var(--border); color: var(--ink2); }
+
+  /* certs + awards */
+  .cert-item { font-size: 10px; color: var(--ink2); margin-bottom: 3px; padding-left: 10px; position: relative; }
+  .cert-item::before { content: '·'; position: absolute; left: 0; color: var(--teal); }
+
+  .award-item { margin-bottom: 6px; }
+  .award-name { font-weight: 500; font-size: 10.5px; }
+  .award-org { font-size: 9.5px; color: var(--ink3); }
+  .award-desc { font-size: 10px; color: var(--ink2); }
+
+  /* languages */
+  .lang-row { display: flex; flex-wrap: wrap; gap: 4px; }
+  .lang-tag { font-family: 'DM Mono', monospace; font-size: 8.5px; padding: 1px 6px; border: 1px solid var(--border); color: var(--ink2); }
+  .lang-tag.native { border-color: var(--teal); color: var(--teal); }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <h1>Imen Ayadi</h1>
+      <div class="title">Data Engineer</div>
+    </div>
+    <div class="header-right">
+      <div><a href="mailto:imenayadi86@gmail.com">imenayadi86@gmail.com</a></div>
+      <div>+216 26 774 432 &nbsp;·&nbsp; Tunis, Tunisia</div>
+      <div><a href="https://www.linkedin.com/in/imen-ayadi-29255617a/" target="_blank">linkedin.com/in/imen-ayadi</a></div>
+      <div><a href="https://github.com/imen-ayadi" target="_blank">github.com/imen-ayadi</a></div>
+      <div><a href="https://imen-ayadi.github.io" target="_blank">imen-ayadi.github.io</a></div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- LEFT COLUMN -->
+    <div>
+
+      <!-- PROFILE -->
+      <div class="section">
+        <div class="section-label">Profile</div>
+        <p class="profile">Data Engineer with 2+ years building humanitarian data infrastructure at IMPACT Initiatives — Python ELT pipelines, PostgreSQL star schemas, and Power BI dashboards used by field teams in Sudan and Libya. MSc in Data Analytics (16.5/20). Finance background and 3 years teaching statistics give a strong analytical foundation. Open to Data Engineer and BI Developer roles, on-site, hybrid, or remote.</p>
+      </div>
+
+      <!-- EXPERIENCE -->
+      <div class="section">
+        <div class="section-label">Experience</div>
+
+        <div class="exp-entry">
+          <div class="exp-header">
+            <div class="exp-role">Data Engineer — Sudan Mission</div>
+            <div class="exp-date">Jun 2024 – Present</div>
+          </div>
+          <div class="exp-org">IMPACT Initiatives · Nairobi, Kenya</div>
+          <ul class="exp-bullets">
+            <li>Designed and built a PostgreSQL star schema consolidating 10+ humanitarian data sources</li>
+            <li>Developed Python ELT pipelines ingesting field data from KoboToolbox API, with spatial joins, schema validation, and automated transformation</li>
+            <li>Built a 4-tier location matching system achieving 100% geographic coverage across Sudan</li>
+            <li>Created 10+ fact &amp; dimension views supporting 26+ months of time-series field data</li>
+            <li>Delivered Power BI dashboard used by humanitarian teams to track displacement and service gaps across 55 admin clusters</li>
+          </ul>
+        </div>
+
+        <div class="exp-entry">
+          <div class="exp-header">
+            <div class="exp-role">Data Officer — Libya Mission</div>
+            <div class="exp-date">Feb – Jun 2024</div>
+          </div>
+          <div class="exp-org">IMPACT Initiatives · Tunis, Tunisia</div>
+          <ul class="exp-bullets">
+            <li>Processed and cleaned 5,000+ survey responses via KoboToolbox across 3 assessment rounds</li>
+            <li>Built Power BI dashboards tracking displacement, food security, and healthcare access across 8 governorates</li>
+            <li>Ran vulnerability and trend analysis in R and Python, outputs feeding directly into IMPACT situation reports</li>
+            <li>Trained 5+ partner organisations on KoboToolbox and data quality best practices</li>
+          </ul>
+        </div>
+
+        <div class="exp-entry">
+          <div class="exp-header">
+            <div class="exp-role">Data Scientist Intern</div>
+            <div class="exp-date">Feb – Jun 2024</div>
+          </div>
+          <div class="exp-org">VERMEG for Banking &amp; Insurance Software · Tunis, Tunisia</div>
+          <ul class="exp-bullets">
+            <li>Automated email classification using RoBERTa and DeBERTa achieving 92% accuracy</li>
+            <li>Built BART summarisation pipeline cutting manual email review time for compliance teams</li>
+            <li>Built sentiment classifier to triage inbound tickets by urgency, reducing time-to-first-response on critical issues</li>
+          </ul>
+        </div>
+
+        <div class="exp-entry">
+          <div class="exp-header">
+            <div class="exp-role">BI Analyst Intern</div>
+            <div class="exp-date">Jul – Aug 2023</div>
+          </div>
+          <div class="exp-org">Wimbee · Tunis, Tunisia</div>
+          <ul class="exp-bullets">
+            <li>Built Power BI dashboard giving the sales team real-time pipeline visibility, replacing manual weekly reports (15% efficiency gain)</li>
+            <li>Rebuilt Talend ETL pipeline integrating CRM and transaction data into the reporting layer, eliminating manual data exports</li>
+          </ul>
+        </div>
+
+        <div class="exp-entry">
+          <div class="exp-header">
+            <div class="exp-role">Statistics &amp; Mathematics Assistant</div>
+            <div class="exp-date">2018 – 2021</div>
+          </div>
+          <div class="exp-org">Mediterranean School of Business · Tunis, Tunisia</div>
+          <ul class="exp-bullets">
+            <li>Delivered statistics and mathematics courses to undergraduate students over 3 academic years</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- PROJECTS -->
+      <div class="section">
+        <div class="section-label">Projects</div>
+
+        <div class="proj-entry">
+          <div class="proj-title">Sudan Humanitarian Data Infrastructure</div>
+          <div class="proj-meta">IMPACT Initiatives · 2024 – Present</div>
+          <div class="proj-desc">KoboToolbox API → Python ELT → PostgreSQL star schema. 10+ data sources, Azure Blob Storage archiving, Power BI choropleth across 55 admin clusters and 26+ months of field data.</div>
+          <div class="proj-tags">Python · PostgreSQL · Azure Blob Storage · KoboToolbox API · Power BI · DAX</div>
+        </div>
+
+        <div class="proj-entry">
+          <div class="proj-title">Smart Box — AI Email Management System</div>
+          <div class="proj-meta">MSc Capstone · 2024</div>
+          <div class="proj-desc">Multi-model NLP pipeline automating email triage: classification (RoBERTa), sentiment (BERT), NER (spaCy), summarisation (BART), response generation (LLaMA-2). Deployed on HuggingFace Spaces with Docker.</div>
+          <div class="proj-tags">Python · Transformers · RoBERTa · BERT · LLaMA-2 · Docker · HuggingFace</div>
+        </div>
+
+        <div class="proj-entry">
+          <div class="proj-title">Olist Sales Analysis <span style="color:var(--teal);font-weight:400;">· Award Winner</span></div>
+          <div class="proj-meta">ESPRIT · 2023</div>
+          <div class="proj-desc">End-to-end analytics on 99K+ e-commerce orders: Talend ETL, star schema data warehouse, XGBoost customer satisfaction prediction (88.4% accuracy).</div>
+          <div class="proj-tags">Talend · Power BI · XGBoost · Python · Star Schema</div>
+        </div>
+
+        <div class="proj-entry">
+          <div class="proj-title">National Health Analysis</div>
+          <div class="proj-meta">2024</div>
+          <div class="proj-desc">Healthcare dashboard across 55,500 patient records from 10 hospitals — demographics, admissions, billing, and treatment outcomes.</div>
+          <div class="proj-tags">Power BI · DAX · Power Query · Excel</div>
+        </div>
+
+      </div>
+
+    </div><!-- /left -->
+
+    <!-- RIGHT COLUMN -->
+    <div>
+
+      <!-- EDUCATION -->
+      <div class="section">
+        <div class="section-label">Education</div>
+
+        <div class="edu-entry">
+          <div class="edu-degree">MSc Data Analytics</div>
+          <div class="edu-school">ESB – Esprit School of Business</div>
+          <div class="edu-year">2022 – 2024</div>
+          <div class="edu-grade">16.5 / 20</div>
+        </div>
+
+        <div class="edu-entry">
+          <div class="edu-degree">BSc Business Management <em>(Finance)</em></div>
+          <div class="edu-school">MSB – Mediterranean School of Business</div>
+          <div class="edu-year">2018 – 2021</div>
+          <div class="edu-grade">GPA 3.16 / 4</div>
+        </div>
+
+      </div>
+
+      <!-- SKILLS -->
+      <div class="section">
+        <div class="section-label">Skills</div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Data Engineering</div>
+          <div class="skill-tags">
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">ETL / ELT</span>
+            <span class="skill-tag">Talend</span>
+            <span class="skill-tag">dbt</span>
+            <span class="skill-tag">Azure Blob Storage</span>
+            <span class="skill-tag">KoboToolbox API</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Analytics &amp; Visualisation</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">DAX</span>
+            <span class="skill-tag">Tableau</span>
+            <span class="skill-tag">R</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">Excel</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">ML &amp; NLP</div>
+          <div class="skill-tags">
+            <span class="skill-tag">RoBERTa</span>
+            <span class="skill-tag">DeBERTa</span>
+            <span class="skill-tag">BART</span>
+            <span class="skill-tag">XGBoost</span>
+            <span class="skill-tag">Scikit-learn</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Tools &amp; Workflow</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">Jira</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">SSMS</span>
+            <span class="skill-tag">DBeaver</span>
+            <span class="skill-tag">Jupyter</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CERTIFICATIONS -->
+      <div class="section">
+        <div class="section-label">Certifications</div>
+        <div class="cert-item">Building Generative AI Apps with Gradio <span style="color:var(--teal)">· DeepLearning.AI</span></div>
+        <div class="cert-item">Open Source Models with Hugging Face <span style="color:var(--teal)">· DeepLearning.AI</span></div>
+        <div class="cert-item">Prompt Engineering with Llama 2 &amp; 3 <span style="color:var(--teal)">· DeepLearning.AI</span></div>
+        <div class="cert-item">Introduction to Power BI <span style="color:var(--teal)">· DataCamp</span></div>
+        <div class="cert-item">Deutsch A1 GER <span style="color:var(--teal)">· Boosteno Sprachzentrum</span></div>
+      </div>
+
+      <!-- AWARDS -->
+      <div class="section">
+        <div class="section-label">Awards</div>
+        <div class="award-item">
+          <div class="award-name">Bal de Projet — 1st Place</div>
+          <div class="award-org">ESPRIT · 2023</div>
+          <div class="award-desc">Sales analysis with Power BI &amp; XGBoost prediction model</div>
+        </div>
+        <div class="award-item">
+          <div class="award-name">Business Game — 1st Prize</div>
+          <div class="award-org">SMU · 2021</div>
+          <div class="award-desc">Sales strategy &amp; cost optimisation</div>
+        </div>
+      </div>
+
+      <!-- LANGUAGES -->
+      <div class="section">
+        <div class="section-label">Languages</div>
+        <div class="lang-row">
+          <span class="lang-tag native">Arabic</span>
+          <span class="lang-tag native">French</span>
+          <span class="lang-tag">English</span>
+          <span class="lang-tag">German A1</span>
+        </div>
+      </div>
+
+    </div><!-- /right -->
+
+  </div><!-- /body -->
+
+</div>
+</body>
+</html>
