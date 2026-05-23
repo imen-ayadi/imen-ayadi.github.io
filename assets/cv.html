@@ -33,11 +33,84 @@ body {
 }
 
 @media print {
-  body { background: white; font-size: 10px; }
-  .page { width: 210mm; min-height: 297mm; box-shadow: none; display: flex; flex-direction: row; }
-  a { color: inherit; }
+  /* A4 page setup — suppresses browser header/footer chrome */
+  @page { size: A4; margin: 12mm 16mm 12mm 16mm; }
+
+  /* Reset animations & screen-only decoration */
   * { animation: none !important; transition: none !important; opacity: 1 !important; transform: none !important; }
-  .profile-text { border-left: 2px solid var(--teal) !important; background-image: none !important; padding-left: 10px !important; }
+  a[href]::after { content: none !important; }
+
+  /* Page container */
+  body { background: white; font-size: 9.5px; }
+  .page { width: 100%; min-height: auto; box-shadow: none; display: flex; flex-direction: row; }
+
+  /* Force background colors on sidebar & accents */
+  .sidebar {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    background: var(--dark) !important;
+    padding: 22px 16px !important;
+  }
+  .monogram {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    background: var(--teal2) !important;
+  }
+  .sb-tag {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    border-color: rgba(255,255,255,0.15) !important;
+    color: rgba(247,245,240,0.65) !important;
+    font-size: 7.5px !important;
+  }
+  .sb-label {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    color: var(--teal) !important;
+    font-size: 7px !important;
+  }
+  .section-label {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    color: var(--teal2) !important;
+    font-size: 7.5px !important;
+  }
+  .edu-grade {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    background: var(--teal2) !important;
+    color: #fff !important;
+  }
+  .proj-tags {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    background: #f0f9f6 !important;
+    color: var(--teal2) !important;
+  }
+
+  /* Font size scale-down */
+  .sb-name { font-size: 17px !important; }
+  .exp-bullets li { font-size: 9px !important; }
+
+  /* Spacing reduction */
+  .section { margin-bottom: 11px !important; }
+  .exp-entry { margin-bottom: 8px !important; }
+  .proj-entry { margin-bottom: 7px !important; }
+
+  /* Restore profile accent border (overrides animation block) */
+  .profile-text {
+    border-left: 2px solid var(--teal) !important;
+    background-image: none !important;
+    padding-left: 10px !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  /* Prevent awkward page breaks inside entries */
+  .exp-entry, .proj-entry, .edu-entry, .section { break-inside: avoid; }
+
+  /* Link color */
+  a { color: inherit; text-decoration: none; }
 }
 
 /* ── PAGE ─────────────────────────── */
